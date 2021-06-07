@@ -21,7 +21,7 @@ class CreateWarehousesTable extends Migration
             $table->string('salesman_name')->nullable();
 
             $table->bigInteger('location_id')->unsigned();
-            $table->foreign('location_id')->references('id')->on('locations')->onDelete();
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
 
             $table->timestamps();
         });

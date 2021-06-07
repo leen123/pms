@@ -34,7 +34,7 @@ class CreateProductsTable extends Migration
             $table->foreign('factory_id')->references('id')->on('factories')->onDelete('cascade');
 
             $table->bigInteger('shelf_id')->unsigned();
-            $table->foreign('shelf_id')->references('id')->on('shelfs')->onDelete('cascade');
+            $table->foreign('shelf_id')->references('id')->on('shelves')->onDelete('cascade');
 
             $table->bigInteger('pharmacy_id')->unsigned();
             $table->foreign('pharmacy_id')->references('id')->on('pharmacies')->onDelete('cascade');
@@ -43,14 +43,16 @@ class CreateProductsTable extends Migration
             $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
 
             $table->bigInteger('caliber_id')->unsigned();
-            $table->foreign('caliber_id')->references('id')->on('caliberes')->onDelete('cascade');
+            $table->foreign('caliber_id')->references('id')->on('calibers')->onDelete('cascade');
 
-            $table->bigInteger('chemical_id')->unsigned();
-            $table->foreign('chemical_id')->references('id')->on('chamicals')->onDelete('cascade');
+            $table->bigInteger('chemicalname_id')->unsigned();
+            $table->foreign('chemicalname_id')->references('id')->on('chemicalnames')->onDelete('cascade');
 
             $table->timestamps();
         });
     }
+
+
 
     /**
      * Reverse the migrations.

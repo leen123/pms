@@ -23,14 +23,15 @@ class CreateBilldetailsTable extends Migration
             $table->double('price')->nullable();
 
             $table->bigInteger('bill_id')->unsigned();
-            $table->foreign('bill_id')->references('id')->on('bills')->onDelete();
+            $table->foreign('bill_id')->references('id')->on('bills')->onDelete('cascade');
 
             $table->bigInteger('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products')->onDelete();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
 
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
