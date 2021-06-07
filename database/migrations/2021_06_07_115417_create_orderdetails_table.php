@@ -18,11 +18,11 @@ class CreateOrderdetailsTable extends Migration
             $table->bigInteger('quantity')->nullable();
             $table->double('price')->nullable();
 
-            //$table->bigInteger('order_id')->unsigned();
-            //$table->foreign('order_id')->references('id')->on('orders')->onDelete();
+            $table->bigInteger('order_id')->unsigned();
+            $table->foreign('order_id')->references('id')->on('orders')->onDelete();
 
-            //$table->bigInteger('product_id')->unsigned();
-            //$table->foreign('product_id')->references('id')->on('products')->onDelete();
+            $table->bigInteger('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete();
 
             $table->timestamps();
         });

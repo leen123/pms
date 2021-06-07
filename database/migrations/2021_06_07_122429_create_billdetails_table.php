@@ -22,11 +22,11 @@ class CreateBilldetailsTable extends Migration
             $table->string('expirty_date')->nullable();
             $table->double('price')->nullable();
 
-            //$table->bigInteger('bill_id')->unsigned();
-            //$table->foreign('bill_id')->references('id')->on('bills')->onDelete();
+            $table->bigInteger('bill_id')->unsigned();
+            $table->foreign('bill_id')->references('id')->on('bills')->onDelete();
 
-            //$table->bigInteger('product_id')->unsigned();
-            //$table->foreign('product_id')->references('id')->on('products')->onDelete();
+            $table->bigInteger('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete();
 
             $table->timestamps();
         });

@@ -27,26 +27,26 @@ class CreateProductsTable extends Migration
             $table->string('side_effects')->nullable();
             $table->string('notes')->nullable();
 
-         //   $table->bigInteger('format_id')->unsigned();
-          //  $table->foreign('format_id')->references('id')->on('formats')->onDelete('cascade');
+           $table->bigInteger('format_id')->unsigned();
+            $table->foreign('format_id')->references('id')->on('formats')->onDelete('cascade');
 
-           // $table->bigInteger('factory_id')->unsigned();
-           // $table->foreign('factory_id')->references('id')->on('factories')->onDelete('cascade');
+            $table->bigInteger('factory_id')->unsigned();
+            $table->foreign('factory_id')->references('id')->on('factories')->onDelete('cascade');
 
-            //$table->bigInteger('shelf_id')->unsigned();
-           // $table->foreign('shelf_id')->references('id')->on('shelfs')->onDelete('cascade');
+            $table->bigInteger('shelf_id')->unsigned();
+            $table->foreign('shelf_id')->references('id')->on('shelfs')->onDelete('cascade');
 
             $table->bigInteger('pharmacy_id')->unsigned();
             $table->foreign('pharmacy_id')->references('id')->on('pharmacies')->onDelete('cascade');
 
-            //$table->bigInteger('type_id')->unsigned();
-            //$table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
+            $table->bigInteger('type_id')->unsigned();
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
 
             $table->bigInteger('caliber_id')->unsigned();
             $table->foreign('caliber_id')->references('id')->on('caliberes')->onDelete('cascade');
 
-           // $table->bigInteger('chemical_id')->unsigned();
-           // $table->foreign('chemical_id')->references('id')->on('chamicals')->onDelete('cascade');
+            $table->bigInteger('chemical_id')->unsigned();
+            $table->foreign('chemical_id')->references('id')->on('chamicals')->onDelete('cascade');
 
             $table->timestamps();
         });

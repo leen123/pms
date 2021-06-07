@@ -18,8 +18,8 @@ class CreateBillsTable extends Migration
             $table->string('date')->nullable();
             $table->string('description')->nullable();
             $table->double('total_price')->nullable();
-            //$table->bigInteger('user_id')->unsigned();
-            //$table->foreign('user_id')->references('id')->on('users')->onDelete();
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete();
         });
     }
 
