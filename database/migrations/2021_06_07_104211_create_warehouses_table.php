@@ -20,8 +20,8 @@ class CreateWarehousesTable extends Migration
             $table->bigInteger('phone')->nullable();
             $table->string('salesman_name')->nullable();
 
-            //$table->bigInteger('location_id')->unsigned();
-            //$table->foreign('location_id')->references('id')->on('locations')->onDelete();
+            $table->bigInteger('location_id')->unsigned();
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete();
 
             $table->timestamps();
         });

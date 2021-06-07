@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('fullname')->nullable();
              $table->bigInteger('phone')->nullable();
              $table->enum('gender',['MALE','FEMALE'])->default('MALE');
@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
     }
 
     /**
