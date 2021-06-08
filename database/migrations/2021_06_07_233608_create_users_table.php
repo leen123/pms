@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable();
             $table->string('birth')->nullable();
             $table->string('date_grad')->nullable();
-             $table->bigInteger('phone')->nullable();
+          $table->bigInteger('phone')->nullable();
 
              $table->bigInteger('role_id')->unsigned();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
