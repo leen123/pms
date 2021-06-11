@@ -20,8 +20,6 @@ use Composer\Semver\VersionParser;
 
 
 
-
-
 class InstalledVersions
 {
 private static $installed = array (
@@ -32,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '4f589d864b355dc685f0f4665bae0494eea5c58d',
+    'reference' => 'bdbb5902e4748e7cfd9d189306e7eddf7681fac1',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -439,7 +437,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '4f589d864b355dc685f0f4665bae0494eea5c58d',
+      'reference' => 'bdbb5902e4748e7cfd9d189306e7eddf7681fac1',
     ),
     'laravel/tinker' => 
     array (
@@ -449,6 +447,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '04ad32c1a3328081097a181875733fa51f402083',
+    ),
+    'laravel/ui' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f5398544a9cd4804a42d09ce51735e37cd51ea2d',
     ),
     'league/commonmark' => 
     array (
@@ -738,8 +745,8 @@ private static $installed = array (
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -1267,6 +1274,7 @@ foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
 
+
 if (1 === \count($packages)) {
 return $packages[0];
 }
@@ -1458,7 +1466,6 @@ public static function reload($data)
 self::$installed = $data;
 self::$installedByVendor = array();
 }
-
 
 
 
