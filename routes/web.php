@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 
-Route::get('/format', 'PagesController@format')->name('format');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +27,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+////////////////////////////////////////////////////////
+//formatscontroller
+Route::get('/formats/add', 'FormatsController@add')->name('add-format');
+Route::post('/formats/store', 'FormatsController@store')->name('store-format');
+Route::get('/formats/all', 'FormatsController@all')->name('all-formats');
+Route::get('/formats/edit/{id}', 'FormatsController@edit')->name('edit-format');
+Route::post('/formats/edit/{id}', 'FormatsController@update')->name('edit-format');
+Route::get('/formats/delete/{id}', 'FormatsController@delete')->name('delete-format');
 
-Route::get('/home', 'HomeController@index')->name('home');
+///////////////////////////////////////////////////////////
+

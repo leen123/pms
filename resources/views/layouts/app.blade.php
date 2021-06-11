@@ -37,11 +37,11 @@
        <!-- Dropdown -->
        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Category
+          Format
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add category</a>
-          <a class="dropdown-item" href="">all categories</a>
+          <a class="dropdown-item" href="{{route('add-format')}}">add foramt</a>
+          <a class="dropdown-item" href="{{route('all-formats')}}">all formats</a>
 
         </div>
       </li>
@@ -49,11 +49,11 @@
          <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          camera
+          Caliber
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add camera</a>
-          <a class="dropdown-item" href="">all cameras</a>
+          <a class="dropdown-item" href="">add caliber</a>
+          <a class="dropdown-item" href="">all calibers</a>
 
         </div>
       </li>
@@ -63,11 +63,11 @@
          <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          photographer
+        Chemical names
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add photographer</a>
-          <a class="dropdown-item" href="">all photographers</a>
+          <a class="dropdown-item" href="">add chemical name</a>
+          <a class="dropdown-item" href="">all chemical names</a>
 
         </div>
       </li>
@@ -75,11 +75,11 @@
         <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          album
+          Factory
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add album</a>
-          <a class="dropdown-item" href="">all albums</a>
+          <a class="dropdown-item" href="">add factory</a>
+          <a class="dropdown-item" href="">all factories</a>
 
         </div>
       </li>
@@ -88,13 +88,50 @@
         <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          photo
+          Role
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add photo</a>
-          <a class="dropdown-item" href="">all photos</a>
+          <a class="dropdown-item" href="">add role</a>
+          <a class="dropdown-item" href="">all roles</a>
 
         </div>
+        </li>
+
+           <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Shelf
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add shelf</a>
+          <a class="dropdown-item" href="">all shelves</a>
+
+        </div>
+        </li>
+
+             <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Type
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add type</a>
+          <a class="dropdown-item" href="">all types</a>
+
+        </div>
+        </li>
+
+                 <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Warehouse
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add warehouse</a>
+          <a class="dropdown-item" href="">all warehouses</a>
+
+        </div>
+        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
