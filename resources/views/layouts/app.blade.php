@@ -34,6 +34,67 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
+       <!-- Dropdown -->
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Category
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add category</a>
+          <a class="dropdown-item" href="">all categories</a>
+
+        </div>
+      </li>
+
+         <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          camera
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add camera</a>
+          <a class="dropdown-item" href="">all cameras</a>
+
+        </div>
+      </li>
+
+
+
+         <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          photographer
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add photographer</a>
+          <a class="dropdown-item" href="">all photographers</a>
+
+        </div>
+      </li>
+
+        <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          album
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add album</a>
+          <a class="dropdown-item" href="">all albums</a>
+
+        </div>
+      </li>
+
+
+        <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          photo
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">add photo</a>
+          <a class="dropdown-item" href="">all photos</a>
+
+        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
