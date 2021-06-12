@@ -46,17 +46,30 @@
         </div>
       </li>
 
+       <!-- Dropdown -->
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          User
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-user')}}">add user</a>
+          <a class="dropdown-item" href="{{route('all-users')}}">all users</a>
+
+        </div>
+      </li>
+
          <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
           Caliber
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add caliber</a>
-          <a class="dropdown-item" href="">all calibers</a>
+          <a class="dropdown-item" href="{{route('add-caliber')}}">add caliber</a>
+          <a class="dropdown-item" href="{{route('all-calibers')}}">all calibers</a>
 
         </div>
       </li>
+
 
 
 
@@ -78,8 +91,8 @@
           Factory
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add factory</a>
-          <a class="dropdown-item" href="">all factories</a>
+          <a class="dropdown-item" href="{{route('add-factory')}}">add factory</a>
+          <a class="dropdown-item" href="{{route('all-factories')}}">all factories</a>
 
         </div>
       </li>
@@ -103,8 +116,56 @@
           Shelf
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add shelf</a>
-          <a class="dropdown-item" href="">all shelves</a>
+          <a class="dropdown-item" href="{{route('add-shelf')}}">add shelf</a>
+          <a class="dropdown-item" href="{{route('all-shelves')}}">all shelves</a>
+
+        </div>
+        </li>
+
+             <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          orderdetail
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-orderdetail')}}">add orderdetail</a>
+          <a class="dropdown-item" href="{{route('all-orderdetails')}}">all orderdetails</a>
+
+        </div>
+        </li>
+
+              <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          order
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-order')}}">add order</a>
+          <a class="dropdown-item" href="{{route('all-orders')}}">all orders</a>
+
+        </div>
+        </li>
+
+                <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          state
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-state')}}">add state</a>
+          <a class="dropdown-item" href="{{route('all-states')}}">all states</a>
+
+        </div>
+        </li>
+
+                <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          permission
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-permission')}}">add permission</a>
+          <a class="dropdown-item" href="{{route('all-permissions')}}">all permissions</a>
 
         </div>
         </li>

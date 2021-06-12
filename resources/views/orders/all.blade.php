@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">all calibers</div>
+                <div class="card-header">all orders</div>
 
 <table class="table table-bordered">
     <thead>
@@ -16,13 +16,13 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($caliber as $caliber)
+      @foreach($order as $order)
       <tr>
-        <td>{{ $caliber->id}}</td>
-        <td>{{ $caliber->name}}</td>
+        <td>{{ $order->id}}</td>
+        <td>{{ $order->name}}</td>
         <td>
-          <a href="/calibers/edit/{{$caliber->id }}" class="btn btn-success">Edit </a>
-             <a href="/calibers/delete/{{$caliber->id }}" class="btn btn-danger">Delete </a>
+          <a href="/orders/edit/{{$order->id }}" class="btn btn-success">Edit </a>
+             <a href="/orders/delete/{{$order->id }}" class="btn btn-danger">Delete </a>
         </td>
       </tr>
       @endforeach

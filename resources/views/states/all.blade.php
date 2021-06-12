@@ -5,9 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">all calibers</div>
+                <div class="card-header">all states</div>
 
-<table class="table table-bordered">
+<table class="table table-bstateed">
     <thead>
       <tr>
         <th>#ID</th>
@@ -16,13 +16,13 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($caliber as $caliber)
+      @foreach($state as $state)
       <tr>
-        <td>{{ $caliber->id}}</td>
-        <td>{{ $caliber->name}}</td>
+        <td>{{ $state->id}}</td>
+        <td>{{ $state->name}}</td>
         <td>
-          <a href="/calibers/edit/{{$caliber->id }}" class="btn btn-success">Edit </a>
-             <a href="/calibers/delete/{{$caliber->id }}" class="btn btn-danger">Delete </a>
+          <a href="/states/edit/{{$state->id }}" class="btn btn-success">Edit </a>
+             <a href="/states/delete/{{$state->id }}" class="btn btn-danger">Delete </a>
         </td>
       </tr>
       @endforeach

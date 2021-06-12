@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">add caliber</div>
+                <div class="card-header">add shelf</div>
 
 
-<form action="{{route('store-caliber')}}" method="POST">
+<form action="{{route('store-shelf')}}" method="POST">
 	@csrf
   <div class="form-group">
     <label for="name">Name:</label>
@@ -26,4 +26,3 @@
     </div>
 </div>
 @endsection
-
