@@ -66,8 +66,8 @@
         Chemical names
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add chemical name</a>
-          <a class="dropdown-item" href="">all chemical names</a>
+          <a class="dropdown-item" href="{{route('add-chemicalname')}}">add chemical name</a>
+          <a class="dropdown-item" href="{{route('all-chemicalnames')}}">all chemical names</a>
 
         </div>
       </li>
@@ -91,8 +91,8 @@
           Role
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add role</a>
-          <a class="dropdown-item" href="">all roles</a>
+          <a class="dropdown-item" href="{{route('add-role')}}">add role</a>
+          <a class="dropdown-item" href="{{route('all-roles')}}">all roles</a>
 
         </div>
         </li>
@@ -115,8 +115,8 @@
           Type
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add type</a>
-          <a class="dropdown-item" href="">all types</a>
+          <a class="dropdown-item" href="{{route('add-type')}}">add type</a>
+          <a class="dropdown-item" href="{{route('all-types')}}">all types</a>
 
         </div>
         </li>
@@ -127,11 +127,76 @@
           Warehouse
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="">add warehouse</a>
-          <a class="dropdown-item" href="">all warehouses</a>
+          <a class="dropdown-item" href="{{route('add-warehouse')}}">add warehouse</a>
+          <a class="dropdown-item" href="{{route('all-warehouses')}}">all warehouses</a>
 
         </div>
         </li>
+
+                   <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         Bill
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-bill')}}">add bill</a>
+          <a class="dropdown-item" href="{{route('all-bills')}}">all bills</a>
+
+        </div>
+        </li>
+
+
+
+          <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         Billdetail
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-billdetail')}}">add billdetail</a>
+          <a class="dropdown-item" href="{{route('all-billdetails')}}">all billdetails</a>
+
+        </div>
+        </li>
+
+         <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         Location
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-location')}}">add location</a>
+          <a class="dropdown-item" href="{{route('all-locations')}}">all locations</a>
+
+        </div>
+        </li>
+
+
+         <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         Product
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-product')}}">add product</a>
+          <a class="dropdown-item" href="{{route('all-products')}}">all products</a>
+
+        </div>
+        </li>
+
+        <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+         Pharmacy
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{{route('add-pharmacy')}}">add pharmacy</a>
+          <a class="dropdown-item" href="{{route('all-pharmacies')}}">all pharmacies</a>
+
+        </div>
+        </li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
