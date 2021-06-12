@@ -5,38 +5,44 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Location;
+use App\State;
+
 class LocationsController extends Controller
 {
     public function add(){
 
-        return view ('locations.add');
+    $state=State::all();
+        return view ('locations.add',compact('state'));
     }
 
   public function store(Request $request){
 
  $location = new Location;
  $location->name = $request->name;
+ $location->state_id= $request->state_id;
  $location->save();
         return back();
     }
 
  public function all(){
 
- $location= Location::all();
+ $location= Location::with('state')->get();
         return view ('locations.all', compact('location'));
     }
 
    public function edit($id){
 
+    $state=State::all();
        $location= Location::where('id','=',$id)->first();
 
-        return view ('locations.edit',compact('location'));
+        return view ('locations.edit',compact('location','state'));
     }
 
     public function update($id,Request $request){
 
  $location =Location::find($id);
  $location->name = $request->name;
+ $location->state_id= $request->state_id;
  $location->save();
         return redirect('/locations/all');
     }

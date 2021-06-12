@@ -11,8 +11,8 @@
 <form action="/calibers/edit/{{$caliber->id}}" method="POST">
 	@csrf
   <div class="form-group">
-    <label for="name">Name:</label>
-    <input type="text" class="form-control" placeholder="Enter name" id="name" name="name"
+    <label for="name">Number:</label>
+    <input type="text" class="form-control" placeholder="Enter number" id="name" name="name"
     value="{{$caliber->name}}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

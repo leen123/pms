@@ -11,9 +11,9 @@
 <form action="/shelves/edit/{{$shelf->id}}" method="POST">
 	@csrf
   <div class="form-group">
-    <label for="name">Name:</label>
-    <input type="text" class="form-control" placeholder="Enter name" id="name" name="name"
-    value="{{$shelf->name}}">
+    <label for="number">Number:</label>
+    <input type="text" class="form-control" placeholder="Enter number" id="number" name="number"
+    value="{{$shelf->number}}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

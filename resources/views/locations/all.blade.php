@@ -12,6 +12,7 @@
       <tr>
         <th>#ID</th>
         <th>Name</th>
+        <th>State</th>
         <th>Control</th>
       </tr>
     </thead>
@@ -20,6 +21,7 @@
       <tr>
         <td>{{ $location->id}}</td>
         <td>{{ $location->name}}</td>
+        <td>{{ $location->state->name}}</td>
         <td>
           <a href="/locations/edit/{{$location->id }}" class="btn btn-success">Edit </a>
              <a href="/locations/delete/{{$location->id }}" class="btn btn-danger">Delete </a>

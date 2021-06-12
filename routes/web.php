@@ -38,8 +38,6 @@ Route::get('/formats/delete/{id}', 'FormatsController@delete')->name('delete-for
 
 ///////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
-
 ////////////////////////////////////////////////////////
 //warehousescontroller
 Route::get('/warehouses/add', 'WarehouseController@add')->name('add-warehouse');
@@ -157,7 +155,6 @@ Route::post('/pharmacies/edit/{id}', 'PharmaciesController@update')->name('edit-
 Route::get('/pharmacies/delete/{id}', 'PharmaciesController@delete')->name('delete-pharmacy');
 
 ///////////////////////////////////////////////////////////
-=======
 ////////////////////////////////////////////////////////
 //userscontroller
 Route::get('/users/add', 'UsersController@add')->name('add-user');
@@ -225,7 +222,7 @@ Route::get('/orders/delete/{id}', 'OrdersController@delete')->name('delete-order
 ///////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////
-//orderscontroller
+//statescontroller
 Route::get('/states/add', 'StatesController@add')->name('add-state');
 Route::post('/states/store', 'StatesController@store')->name('store-state');
 Route::get('/states/all', 'StatesController@all')->name('all-states');
@@ -246,4 +243,3 @@ Route::get('/permissions/delete/{id}', 'PermissionsController@delete')->name('de
 
 ///////////////////////////////////////////////////////////
 
->>>>>>> e642b2fcbb790112a33233b634e4dffad4727f60
