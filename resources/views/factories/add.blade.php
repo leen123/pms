@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">add caliber</div>
+                <div class="card-header">add factory</div>
 
 
-<form action="{{route('store-caliber')}}" method="POST">
+<form action="{{route('store-factory')}}" method="POST">
 	@csrf
   <div class="form-group">
     <label for="name">Name:</label>
