@@ -38,6 +38,8 @@ Route::get('/formats/delete/{id}', 'FormatsController@delete')->name('delete-for
 
 ///////////////////////////////////////////////////////////
 
+
+
 ////////////////////////////////////////////////////////
 //warehousescontroller
 Route::get('/warehouses/add', 'WarehouseController@add')->name('add-warehouse');
@@ -155,6 +157,7 @@ Route::post('/pharmacies/edit/{id}', 'PharmaciesController@update')->name('edit-
 Route::get('/pharmacies/delete/{id}', 'PharmaciesController@delete')->name('delete-pharmacy');
 
 ///////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////
 //userscontroller
 Route::get('/users/add', 'UsersController@add')->name('add-user');

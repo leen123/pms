@@ -10,7 +10,14 @@ class Location extends Model
         return $this->belongsTo('App\State','state_id');
             }
 
-            public function pharmacies(){
+     public function pharmacies(){
                 return $this->hasMany('App\Pharmacy','location_id');
+
+            }
+
+          public function users(){
+                return $this->hasMany('App\User','location_id');
                     }
+
+
 }
