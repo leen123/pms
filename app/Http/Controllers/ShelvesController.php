@@ -16,7 +16,7 @@ class ShelvesController extends Controller
   public function store(Request $request){
 
  $shelf = new Shelf;
- $shelf->name = $request->name;
+ $shelf->number = $request->number;
  $shelf->save();
         return back();
     }
@@ -37,7 +37,7 @@ class ShelvesController extends Controller
     public function update($id,Request $request){
 
  $shelf =Shelf::find($id);
- $shelf->name = $request->name;
+ $shelf->number = $request->number;
  $shelf->save();
         return redirect('/shelves/all');
     }

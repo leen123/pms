@@ -11,7 +11,7 @@
     <thead>
       <tr>
         <th>#ID</th>
-        <th>Name</th>
+        <th>Number</th>
         <th>Control</th>
       </tr>
     </thead>

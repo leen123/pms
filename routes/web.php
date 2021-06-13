@@ -225,7 +225,7 @@ Route::get('/orders/delete/{id}', 'OrdersController@delete')->name('delete-order
 ///////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////
-//orderscontroller
+//statescontroller
 Route::get('/states/add', 'StatesController@add')->name('add-state');
 Route::post('/states/store', 'StatesController@store')->name('store-state');
 Route::get('/states/all', 'StatesController@all')->name('all-states');
@@ -245,3 +245,4 @@ Route::post('/permissions/edit/{id}', 'PermissionsController@update')->name('edi
 Route::get('/permissions/delete/{id}', 'PermissionsController@delete')->name('delete-permission');
 
 ///////////////////////////////////////////////////////////
+

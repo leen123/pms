@@ -11,7 +11,7 @@
     <thead>
       <tr>
         <th>#ID</th>
-        <th>Name</th>
+        <th>Number</th>
         <th>Control</th>
       </tr>
     </thead>
@@ -19,7 +19,7 @@
       @foreach($shelf as $shelf)
       <tr>
         <td>{{ $shelf->id}}</td>
-        <td>{{ $shelf->name}}</td>
+        <td>{{ $shelf->number}}</td>
         <td>
           <a href="/shelves/edit/{{$shelf->id }}" class="btn btn-success">Edit </a>
              <a href="/shelves/delete/{{$shelf->id }}" class="btn btn-danger">Delete </a>

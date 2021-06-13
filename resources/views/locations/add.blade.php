@@ -14,6 +14,16 @@
     <label for="name">Name:</label>
     <input type="text" class="form-control" placeholder="Enter name" id="name" name="name">
   </div>
+
+  <div class="form-group">
+    <label for="state_id">state:</label>
+    <select class="form-control" name="state_id">
+      @foreach($state as $state)
+      <option value="{{$state->id}}">{{$state->name}}</option>
+      @endforeach
+      </select>
+   </div>
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
