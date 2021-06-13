@@ -13,4 +13,14 @@ class Location extends Model
             public function warehouses(){
                 return $this->hasMany('App\Warehouse','location_id');
                     }
+     public function pharmacies(){
+                return $this->hasMany('App\Pharmacy','location_id');
+
+            }
+
+          public function users(){
+                return $this->hasMany('App\User','location_id');
+                    }
+
+
 }
