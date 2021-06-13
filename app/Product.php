@@ -32,4 +32,9 @@ class Product extends Model
                                     public function orderdetails(){
                                         return $this->hasMany('App\Orderdetail','product_id');
                                             }
+
+
+                                            public function pharmacy(){
+                                                return $this->belongsTo('App\Pharmacy','pharmacy_id');
+                                                    }
 }
