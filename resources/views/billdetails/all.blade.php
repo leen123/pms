@@ -11,7 +11,16 @@
     <thead>
       <tr>
         <th>#ID</th>
-        <th>Name</th>
+        <th>Quantity</th>
+        <th>Factory price</th>
+        <th>Selling price</th>
+        <th>MGF date</th>
+        <th>Expirty date</th>
+        <th>Expirty date</th>
+        <th>Price</th>
+        <th>Bill</th>
+        <th>Product</th>
+
         <th>Control</th>
       </tr>
     </thead>
