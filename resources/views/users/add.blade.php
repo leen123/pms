@@ -10,6 +10,7 @@
 
 <form action="{{route('store-user')}}" method="POST">
 	@csrf
+
   <div class="form-group">
     <label for="fullname">Full Name:</label>
     <input type="text" class="form-control" placeholder="Enter name" id="fullname" name="fullname">
@@ -56,7 +57,12 @@
 
   <div class="form-group">
     <label for="notes">Notes:</label>
-    <input type="text" class="form-control" placeholder="Enter notes" id="notes" name="notes">
+    <textarea class="form-control" placeholder="Enter notes" name="notes"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="password">password:</label>
+    <input type="text" class="form-control" placeholder="Enter password" id="password" name="password">
   </div>
 
 
