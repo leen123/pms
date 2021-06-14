@@ -33,37 +33,37 @@
 
   <div class="form-group">
     <label for="application">Application:</label>
-    <input type="text" class="form-control" placeholder="Enter application" id="application" name="application">
+    <textarea  class="form-control" placeholder="Enter application" name="application"></textarea>
   </div>
 
   <div class="form-group">
     <label for="composition">Composition:</label>
-    <input type="text" class="form-control" placeholder="Enter composition" id="composition" name="composition">
+    <textarea  class="form-control" placeholder="Enter composition" name="composition"></textarea>
   </div>
 
   <div class="form-group">
     <label for="side_effects">Side_effects:</label>
-    <input type="text" class="form-control" placeholder="Enter side_effects" id="side_effects" name="side_effects">
+    <textarea class="form-control" placeholder="Enter side_effects" name="side_effects"></textarea>
   </div>
 
   <div class="form-group">
     <label for="notes">Notes:</label>
-    <input type="text" class="form-control" placeholder="Enter notes" id="notes" name="notes">
+    <textarea class="form-control" placeholder="Enter notes" name="notes"></textarea>
   </div>
 
   <div class="form-group">
     <label for="limit_Qty">Limit_Qty:</label>
-    <input type="number" class="form-control" placeholder="Enter limit_Qty" id="limit_Qty" number="limit_Qty">
+    <input type="number" class="form-control" placeholder="Enter limit_Qty" id="limit_Qty" name="limit_Qty">
   </div>
 
   <div class="form-group">
     <label for="current_price">Current_price:</label>
-    <input type="number" class="form-control" placeholder="Enter current_price" id="current_price" number="current_price">
+    <input type="number" class="form-control" placeholder="Enter current_price" id="current_price" name="current_price">
   </div>
 
   <div class="form-group">
     <label for="net_price">Net_price:</label>
-    <input type="number" class="form-control" placeholder="Enter net_price" id="net_price" number="net_price">
+    <input type="number" class="form-control" placeholder="Enter net_price" id="net_price" name="net_price">
   </div>
 
   <div class="form-group">

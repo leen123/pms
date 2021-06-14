@@ -12,6 +12,9 @@
       <tr>
         <th>#ID</th>
         <th>Name</th>
+        <th>description</th>
+        <th>phone</th>
+        <th>location</th>
         <th>Control</th>
       </tr>
     </thead>
@@ -20,6 +23,9 @@
       <tr>
         <td>{{ $pharmacy->id}}</td>
         <td>{{ $pharmacy->name}}</td>
+        <td>{{ $pharmacy->description}}</td>
+        <td>{{ $pharmacy->phone}}</td>
+        <td>{{ $pharmacy->location->name}}</td>
         <td>
           <a href="/pharmacies/edit/{{$pharmacy->id }}" class="btn btn-success">Edit </a>
              <a href="/pharmacies/delete/{{$pharmacy->id }}" class="btn btn-danger">Delete </a>
