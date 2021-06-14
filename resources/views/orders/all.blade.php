@@ -11,7 +11,12 @@
     <thead>
       <tr>
         <th>#ID</th>
-        <th>Name</th>
+        <th>gender</th>
+        <th>date</th>
+        <th>description</th>
+        <th>total_price</th>
+        <th>total_price</th>
+        <th>user</th>
         <th>Control</th>
       </tr>
     </thead>
@@ -19,7 +24,12 @@
       @foreach($order as $order)
       <tr>
         <td>{{ $order->id}}</td>
-        <td>{{ $order->name}}</td>
+        <td>{{ $order->gender}}</td>
+        <td>{{ $order->date}}</td>
+        <td>{{ $order->description}}</td>
+        <td>{{ $order->total_price}}</td>
+        <td>{{ $order->user_id}}</td>
+
         <td>
           <a href="/orders/edit/{{$order->id }}" class="btn btn-success">Edit </a>
              <a href="/orders/delete/{{$order->id }}" class="btn btn-danger">Delete </a>

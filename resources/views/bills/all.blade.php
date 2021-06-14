@@ -11,7 +11,10 @@
     <thead>
       <tr>
         <th>#ID</th>
-        <th>Name</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>total_price</th>
+        <th>User</th>
         <th>Control</th>
       </tr>
     </thead>
@@ -19,7 +22,10 @@
       @foreach($bill as $bill)
       <tr>
         <td>{{ $bill->id}}</td>
-        <td>{{ $bill->name}}</td>
+        <td>{{ $bill->date}}</td>
+        <td>{{ $bill->description}}</td>
+        <td>{{ $bill->total_price}}</td>
+        <td>{{ $bill->user->id}}</td>
         <td>
           <a href="/bills/edit/{{$bill->id }}" class="btn btn-success">Edit </a>
              <a href="/bills/delete/{{$bill->id }}" class="btn btn-danger">Delete </a>

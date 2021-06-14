@@ -11,7 +11,10 @@
     <thead>
       <tr>
         <th>#ID</th>
-        <th>Name</th>
+        <th>quantity</th>
+        <th>price</th>
+        <th>order</th>
+        <th>product</th>
         <th>Control</th>
       </tr>
     </thead>
@@ -19,7 +22,11 @@
       @foreach($orderdetail as $orderdetail)
       <tr>
         <td>{{ $orderdetail->id}}</td>
-        <td>{{ $orderdetail->name}}</td>
+        <td>{{ $orderdetail->quantity}}</td>
+        <td>{{ $orderdetail->price}}</td>
+        <td>{{ $orderdetail->order->id}}</td>
+        <td>{{ $orderdetail->product->id}}</td>
+
         <td>
           <a href="/orderdetails/edit/{{$orderdetail->id }}" class="btn btn-success">Edit </a>
              <a href="/orderdetails/delete/{{$orderdetail->id }}" class="btn btn-danger">Delete </a>
