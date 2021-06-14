@@ -20,15 +20,21 @@
         <th>Price</th>
         <th>Bill</th>
         <th>Product</th>
-
         <th>Control</th>
+
       </tr>
     </thead>
     <tbody>
       @foreach($billdetail as $billdetail)
       <tr>
         <td>{{ $billdetail->id}}</td>
-        <td>{{ $billdetail->name}}</td>
+        <td>{{ $billdetail->quantity}}</td>
+        <td>{{ $billdetail->factory_price}}</td>
+        <td>{{ $billdetail->factory_price}}</td>
+        <td>{{ $billdetail->MGF_date}}</td>
+        <td>{{ $billdetail->expirty_date}}</td>
+        <td>{{ $billdetail->bill->id}}</td>
+        <td>{{ $billdetail->product->id}}</td>
         <td>
           <a href="/billdetails/edit/{{$billdetail->id }}" class="btn btn-success">Edit </a>
              <a href="/billdetails/delete/{{$billdetail->id }}" class="btn btn-danger">Delete </a>
