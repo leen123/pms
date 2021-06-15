@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Order;
+use App\User;
 
 class OrdersController extends Controller
 {
     public function add(){
-
-        return view ('orders.add');
+        $user=User::all();
+        return view ('orders.add',compact('user'));
     }
 
   public function store(Request $request){
@@ -22,16 +23,17 @@ class OrdersController extends Controller
     }
 
  public function all(){
-
+    $order=Order::with('user')->get();
  $order= Order::all();
         return view ('orders.all', compact('order'));
     }
 
    public function edit($id){
 
+    $user=User::all();
        $order= Order::where('id','=',$id)->first();
 
-        return view ('orders.edit',compact('order'));
+        return view ('orders.edit',compact('order','user'));
     }
 
     public function update($id,Request $request){
