@@ -24,7 +24,7 @@ class ProductsController extends Controller
         $caliber=Caliber::all();
         $chemicalname=Chemicalname::all();
         $pharmacy=Pharmacy::all();
-        return view ('products.add'.compact('format','type','factory','shelf','caliber','chemicalname','pharmacy'));
+        return view ('products.add', compact('format','type','factory','shelf','caliber','chemicalname','pharmacy'));
     }
 
   public function store(Request $request){
