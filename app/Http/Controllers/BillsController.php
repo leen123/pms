@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Bill;
+use App\Warehouse;
+use App\User;
 
 class BillsController extends Controller
 {
     public function add(){
 
-        return view ('bills.add');
+        $warehouse=Warehouse::all();
+        $user=User::all();
+        return view ('bills.add',compact('warehouse','user'));
     }
 
   public function store(Request $request){
@@ -26,15 +30,19 @@ class BillsController extends Controller
 
  public function all(){
 
+    $bill=Bill::with('warehouse','user')->get();
  $bill= Bill::all();
         return view ('bills.all', compact('bill'));
     }
 
    public function edit($id){
 
+
+    $warehouse=Warehouse::all();
+        $user=User::all();
        $bill= Bill::where('id','=',$id)->first();
 
-        return view ('bills.edit',compact('bill'));
+        return view ('bills.edit',compact('bill','user','warehouse'));
     }
 
     public function update($id,Request $request){
