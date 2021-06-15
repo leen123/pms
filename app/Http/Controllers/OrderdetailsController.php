@@ -19,7 +19,10 @@ class OrderdetailsController extends Controller
   public function store(Request $request){
 
  $orderdetail = new Orderdetail;
- $orderdetail->name = $request->name;
+ $orderdetail->quantity = $request->quantity;
+ $orderdetail->price = $request->price;
+ $orderdetail->order_id = $request->order_id;
+ $orderdetail->product_id = $request->product_id;
  $orderdetail->save();
         return back();
     }
@@ -43,7 +46,10 @@ class OrderdetailsController extends Controller
     public function update($id,Request $request){
 
  $orderdetail =Orderdetail::find($id);
- $orderdetail->name = $request->name;
+ $orderdetail->quantity = $request->quantity;
+ $orderdetail->price = $request->price;
+ $orderdetail->order_id = $request->order_id;
+ $orderdetail->product_id = $request->product_id;
  $orderdetail->save();
         return redirect('/orderdetails/all');
     }

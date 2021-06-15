@@ -17,7 +17,11 @@ class OrdersController extends Controller
   public function store(Request $request){
 
  $order = new Order;
- $order->name = $request->name;
+ $order->gender = $request->gender;
+ $order->date = $request->date;
+ $order->description = $request->description;
+ $order->total_price = $request->total_price;
+ $order->user_id = $request->user_id;
  $order->save();
         return back();
     }
@@ -39,7 +43,11 @@ class OrdersController extends Controller
     public function update($id,Request $request){
 
  $order =Order::find($id);
- $order->name = $request->name;
+ $order->gender = $request->gender;
+ $order->date = $request->date;
+ $order->description = $request->description;
+ $order->total_price = $request->total_price;
+ $order->user_id = $request->user_id;
  $order->save();
         return redirect('/orders/all');
     }
