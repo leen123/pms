@@ -8,7 +8,7 @@
                 <div class="card-header">add user</div>
 
 
-<form action="{{route('store-user')}}" method="POST">
+<form action="{{route('store-user')}}" method="POST" enctype="multipart/form-data">
 	@csrf
 
   <div class="form-group">

@@ -27,11 +27,13 @@ class UsersController extends Controller
  $user->phone = $request->phone;
  $user->role_id = $request->role_id;
  $user->notes = $request->notes;
- //if(isset($request->image)){
-  //  $image_name=rand().".".$request->image->getClientOriginalExtension();
-  //  $user->imag=$image_name;
- //   $request->image->move('upload',$image_name);
- //  }
+ //////////////////////////////
+ if(isset($request->image)){
+   $image_name=rand().".".$request->image->getClientOriginalExtension();
+    $user->imag=$image_name;
+    $request->image->move('upload',$image_name);
+  }
+  //////////////////////////////
  $user->email = $request->email;
  $user->password = $request->password;
  $user->save();
@@ -64,11 +66,13 @@ class UsersController extends Controller
  $user->phone = $request->phone;
  $user->role_id = $request->role_id;
  $user->notes = $request->notes;
- /*if(isset($request->image)){
+ ////////////////////////////////
+ if(isset($request->image)){
     $image_name=rand().".".$request->image->getClientOriginalExtension();
     $user->imag=$image_name;
     $request->image->move('upload',$image_name);
-   }*/
+   }
+//////////////////////////////
  $user->email = $request->email;
  $user->password = $request->password;
  $user->save();

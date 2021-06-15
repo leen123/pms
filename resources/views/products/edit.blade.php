@@ -8,7 +8,7 @@
                 <div class="card-header">edit product</div>
 
 
-<form action="/products/edit/{{$product->id}}" method="POST">
+<form action="/products/edit/{{$product->id}}" method="POST" enctype="multipart/form-data">
 	@csrf
 
   <div class="form-group">
