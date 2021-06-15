@@ -34,11 +34,11 @@ class ProductsController extends Controller
  $product->barcode = $request->barcode;
  $product->description = $request->description;
  $product->limit_Qty = $request->limit_Qty;
- if(isset($request->image)){
+ /*if(isset($request->image)){
     $image_name=rand().".".$request->image->getClientOriginalExtension();
     $product->imag=$image_name;
     $request->image->move('upload',$image_name);
-   }
+   }*/
  $product->current_price = $request->current_price;
  $product->net_price = $request->net_price;
  $product->application = $request->application;
@@ -85,11 +85,11 @@ class ProductsController extends Controller
  $product->barcode = $request->barcode;
  $product->description = $request->description;
  $product->limit_Qty = $request->limit_Qty;
- if(isset($request->image)){
+ /*if(isset($request->image)){
     $image_name=rand().".".$request->image->getClientOriginalExtension();
     $product->imag=$image_name;
     $request->image->move('upload',$image_name);
-   }
+   }*/
  $product->current_price = $request->current_price;
  $product->net_price = $request->net_price;
  $product->application = $request->application;

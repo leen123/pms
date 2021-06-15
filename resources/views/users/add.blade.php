@@ -27,8 +27,8 @@
   </div>
 
   <div class="form-group">
-    <label for="birth">Date of grad:</label>
-    <input type="text" class="form-control" placeholder="Enter birth" id="birth" name="birth">
+    <label for="date_grad">Date of grad:</label>
+    <input type="text" class="form-control" placeholder="Enter date_grad" id="date_grad" name="date_grad">
   </div>
 
   <div class="form-group">

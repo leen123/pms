@@ -30,7 +30,7 @@
     <label for="location_id">location:</label>
     <select class="form-control" name="location_id">
       @foreach($location as $location)
-      <option value="{{$location->id}}">{{$location->id}}</option>
+      <option value="{{$location->id}}">{{$location->name}}</option>
       @endforeach
       </select>
    </div>
