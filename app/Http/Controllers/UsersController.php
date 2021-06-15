@@ -15,7 +15,20 @@ class UsersController extends Controller
   public function store(Request $request){
 
  $user = new User;
- $user->name = $request->name;
+ $user->fullname = $request->fullname;
+ $user->username = $request->username;
+ $user->birth = $request->birth;
+ $user->date_grad = $request->date_grad;
+ $user->phone = $request->phone;
+ $user->role_id = $request->role_id;
+ $user->notes = $request->notes;
+ if(isset($request->image)){
+    $image_name=rand().".".$request->image->getClientOriginalExtension();
+    $user->imag=$image_name;
+    $request->image->move('upload',$image_name);
+   }
+ $user->email = $request->email;
+ $user->password = $request->password;
  $user->save();
         return back();
     }
@@ -36,7 +49,20 @@ class UsersController extends Controller
     public function update($id,Request $request){
 
  $user =User::find($id);
- $user->name = $request->name;
+ $user->fullname = $request->fullname;
+ $user->username = $request->username;
+ $user->birth = $request->birth;
+ $user->date_grad = $request->date_grad;
+ $user->phone = $request->phone;
+ $user->role_id = $request->role_id;
+ $user->notes = $request->notes;
+ if(isset($request->image)){
+    $image_name=rand().".".$request->image->getClientOriginalExtension();
+    $user->imag=$image_name;
+    $request->image->move('upload',$image_name);
+   }
+ $user->email = $request->email;
+ $user->password = $request->password;
  $user->save();
         return redirect('/users/all');
     }

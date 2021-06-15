@@ -17,6 +17,9 @@ class PharmaciesController extends Controller
 
  $pharmacy = new Pharmacy;
  $pharmacy->name = $request->name;
+ $pharmacy->description = $request->description;
+ $pharmacy->phone = $request->phone;
+ $pharmacy->location_id = $request->location_id;
  $pharmacy->save();
         return back();
     }
@@ -38,6 +41,9 @@ class PharmaciesController extends Controller
 
  $pharmacy =Pharmacy::find($id);
  $pharmacy->name = $request->name;
+ $pharmacy->description = $request->description;
+ $pharmacy->phone = $request->phone;
+ $pharmacy->location_id = $request->location_id;
  $pharmacy->save();
         return redirect('/pharmacies/all');
     }

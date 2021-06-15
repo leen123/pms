@@ -16,7 +16,10 @@ class BillsController extends Controller
   public function store(Request $request){
 
  $bill = new Bill;
- $bill->name = $request->name;
+ $bill->date = $request->date;
+ $bill->description = $request->description;
+ $bill->total_price = $request->total_price;
+ $bill->user_id = $request->user_id;
  $bill->save();
         return back();
     }
@@ -37,7 +40,10 @@ class BillsController extends Controller
     public function update($id,Request $request){
 
  $bill =Bill::find($id);
- $bill->name = $request->name;
+ $bill->date = $request->date;
+ $bill->description = $request->description;
+ $bill->total_price = $request->total_price;
+ $bill->user_id = $request->user_id;
  $bill->save();
         return redirect('/bills/all');
     }

@@ -18,6 +18,9 @@ class WarehouseController extends Controller
 
  $warehouse = new Warehouse;
  $warehouse->name = $request->name;
+ $warehouse->phone = $request->phone;
+ $warehouse->salesman_name = $request->salesman_name;
+ $warehouse->location_id = $request->location_id;
  $warehouse->save();
         return back();
     }
