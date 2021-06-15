@@ -5,11 +5,26 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
+use App\Format;
+use App\Type;
+use App\Factory;
+use App\Shelf;
+use App\Caliber;
+use App\Chemicalname;
+use App\Pharmacy;
+
 class ProductsController extends Controller
 {
     public function add(){
 
-        return view ('products.add');
+        $format=Format::all();
+        $type=Type::all();
+        $factory=Factory::all();
+        $shelf=Shelf::all();
+        $caliber=Caliber::all();
+        $chemicalname=Chemicalname::all();
+        $pharmacy=Pharmacy::all();
+        return view ('products.add'.compact('format','type','factory','shelf','caliber','chemicalname','pharmacy'));
     }
 
   public function store(Request $request){
@@ -22,15 +37,23 @@ class ProductsController extends Controller
 
  public function all(){
 
+    $product=Product::with('format','type','factory','shelf','caliber','chemicalname','pharmacy')->get();
  $product= Product::all();
         return view ('products.all', compact('product'));
     }
 
    public function edit($id){
 
-       $product= Product::where('id','=',$id)->first();
+    $format=Format::all();
+    $type=Type::all();
+    $factory=Factory::all();
+    $shelf=Shelf::all();
+    $caliber=Caliber::all();
+    $chemicalname=Chemicalname::all();
+    $pharmacy=Pharmacy::all();
+      $product= Product::where('id','=',$id)->first();
 
-        return view ('products.edit',compact('product'));
+        return view ('products.edit',compact('product','format','type','factory','shelf','caliber','chemicalname','pharmacy'));
     }
 
     public function update($id,Request $request){

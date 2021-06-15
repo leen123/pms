@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Pharmacy;
+use App\Location;
 
 class PharmaciesController extends Controller
 {
     public function add(){
 
-        return view ('pharmacies.add');
+        $location=Location::all();
+        return view ('pharmacies.add',compact('location'));
     }
 
   public function store(Request $request){
@@ -22,16 +24,17 @@ class PharmaciesController extends Controller
     }
 
  public function all(){
-
+    $pharmacy=Pharmacy::with('location')->get();
  $pharmacy= Pharmacy::all();
         return view ('pharmacies.all', compact('pharmacy'));
     }
 
    public function edit($id){
 
+      $location=Location::all();
        $pharmacy= Pharmacy::where('id','=',$id)->first();
 
-        return view ('pharmacies.edit',compact('pharmacy'));
+        return view ('pharmacies.edit',compact('pharmacy','location'));
     }
 
     public function update($id,Request $request){
