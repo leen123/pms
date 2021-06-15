@@ -28,7 +28,7 @@
 
   <div class="form-group">
     <label for="image">Image:</label>
-    <input type="text" class="form-control" placeholder="Enter image" id="image" name="image">
+    <input type="file" class="form-control" placeholder="Enter image" id="image" name="image">
   </div>
 
   <div class="form-group">
@@ -70,7 +70,7 @@
     <label for="format_id">format:</label>
     <select class="form-control" name="format_id">
       @foreach($format as $format)
-      <option value="{{$format->id}}">{{$format->id}}</option>
+      <option value="{{$format->id}}">{{$format->name}}</option>
       @endforeach
       </select>
    </div>
@@ -79,16 +79,16 @@
     <label for="factory_id">factory:</label>
     <select class="form-control" name="factory_id">
       @foreach($factory as $factory)
-      <option value="{{$factory->id}}">{{$factory->id}}</option>
+      <option value="{{$factory->id}}">{{$factory->name}}</option>
       @endforeach
       </select>
    </div>
 
    <div class="form-group">
-    <label for="shelf_id">format:</label>
+    <label for="shelf_id">shelf:</label>
     <select class="form-control" name="shelf_id">
       @foreach($shelf as $shelf)
-      <option value="{{$shelf->id}}">{{$shelf->id}}</option>
+      <option value="{{$shelf->id}}">{{$shelf->number}}</option>
       @endforeach
       </select>
    </div>
@@ -97,7 +97,7 @@
     <label for="pharmacy_id">pharmacy:</label>
     <select class="form-control" name="pharmacy_id">
       @foreach($pharmacy as $pharmacy)
-      <option value="{{$pharmacy->id}}">{{$pharmacy->id}}</option>
+      <option value="{{$pharmacy->id}}">{{$pharmacy->name}}</option>
       @endforeach
       </select>
    </div>
@@ -106,7 +106,7 @@
     <label for="type_id">type:</label>
     <select class="form-control" name="type_id">
       @foreach($type as $type)
-      <option value="{{$type->id}}">{{$type->id}}</option>
+      <option value="{{$type->id}}">{{$type->name}}</option>
       @endforeach
       </select>
    </div>
@@ -115,7 +115,7 @@
     <label for="caliber_id">caliber:</label>
     <select class="form-control" name="caliber_id">
       @foreach($caliber as $caliber)
-      <option value="{{$caliber->id}}">{{$caliber->id}}</option>
+      <option value="{{$caliber->id}}">{{$caliber->name}}</option>
       @endforeach
       </select>
    </div>
@@ -124,7 +124,7 @@
     <label for="chemicalname_id">chemicalname:</label>
     <select class="form-control" name="chemicalname_id">
       @foreach($chemicalname as $chemicalname)
-      <option value="{{$chemicalname->id}}">{{$chemicalname->id}}</option>
+      <option value="{{$chemicalname->id}}">{{$chemicalname->name}}</option>
       @endforeach
       </select>
    </div>

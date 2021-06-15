@@ -41,7 +41,7 @@
         <td>{{ $product->barcode}}</td>
         <td>{{ $product->description}}</td>
         <td>{{ $product->limit_Qty}}</td>
-        <td><img src="{{asset('upload/'.$user->image)}}" alt="photo"  width="100" height="100"></td>
+        <td><img src="{{asset('upload/'.$product->image)}}" alt="photo"  width="100" height="100"></td>
         <td>{{ $product->current_price}}</td>
         <td>{{ $product->net_price}}</td>
         <td>{{ $product->application}}</td>
