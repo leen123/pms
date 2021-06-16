@@ -19,28 +19,35 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'PagesController@index')->name('index');
 
-Route::get('/contact', 'PagesController@contact')->name('contact');
+Route::get('/contact-us', 'PagesController@contact-us')->name('contact-us');
 
-Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/add-medicine', 'PagesController@add-medicine')->name('add-medicine');
 
-Route::get('/blog', 'PagesController@blog')->name('blog');
+Route::get('/dashboard', 'PagesController@ashboard')->name('ashboard');
 
-Route::get('/blog_details', 'PagesController@blog_details')->name('blog_details');
+Route::get('/edit-inputs', 'PagesController@edit-inputs')->name('edit-inputs');
 
-Route::get('/gallery', 'PagesController@gallery')->name('gallery');
+Route::get('/edit-medicine', 'PagesController@edit-medicine')->name('edit-medicine');
 
-Route::get('/portfolio', 'PagesController@portfolio')->name('portfolio');
+Route::get('/general-settings', 'PagesController@general-settings')->name('general-settings');
 
-Route::get('/portfolio_details', 'PagesController@portfolio_details')->name('portfolio_details');
+Route::get('/index', 'PagesController@index')->name('index');
 
-Route::get('/pricing', 'PagesController@pricing')->name('pricing');
+Route::get('/launcher', 'PagesController@launcher')->name('launcher');
 
-Route::get('/services', 'PagesController@services')->name('services');
+Route::get('/main', 'PagesController@main')->name('main');
 
+Route::get('/my-account', 'PagesController@my-account')->name('my-account');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/new-bill', 'PagesController@new-bill')->name('new-bill');
+
+Route::get('/remove-medicine', 'PagesController@remove-medicine')->name('remove-medicine');
+
+Route::get('/search-for-medicine', 'PagesController@search-for-medicine')->name('search-for-medicine');
+
+//Route::get('/', function () {
+  //  return view('welcome');
+//});
 
 Auth::routes();
 
