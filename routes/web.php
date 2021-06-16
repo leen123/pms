@@ -19,31 +19,29 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'PagesController@index')->name('index');
 
-Route::get('/contact-us', 'PagesController@contact-us')->name('contact-us');
+Route::get('/contact-us', 'PagesController@contact_us')->name('contact-us');
 
-Route::get('/add-medicine', 'PagesController@add-medicine')->name('add-medicine');
+Route::get('/add-medicine', 'PagesController@add_medicine')->name('add-medicine');
 
-Route::get('/dashboard', 'PagesController@ashboard')->name('ashboard');
+Route::get('/dashboard', 'PagesController@dashboard')->name('dashboard');
 
-Route::get('/edit-inputs', 'PagesController@edit-inputs')->name('edit-inputs');
+Route::get('/edit-inputs-settings', 'PagesController@edit_inputs_settings')->name('edit-inputs-settings');
 
-Route::get('/edit-medicine', 'PagesController@edit-medicine')->name('edit-medicine');
+Route::get('/edit-medicine', 'PagesController@edit_medicine')->name('edit-medicine');
 
-Route::get('/general-settings', 'PagesController@general-settings')->name('general-settings');
-
-Route::get('/index', 'PagesController@index')->name('index');
+Route::get('/general-settings', 'PagesController@general_settings')->name('general-settings');
 
 Route::get('/launcher', 'PagesController@launcher')->name('launcher');
 
 Route::get('/main', 'PagesController@main')->name('main');
 
-Route::get('/my-account', 'PagesController@my-account')->name('my-account');
+Route::get('/my-account', 'PagesController@my_account')->name('my-account');
 
-Route::get('/new-bill', 'PagesController@new-bill')->name('new-bill');
+Route::get('/new-bill', 'PagesController@new_bill')->name('new-bill');
 
-Route::get('/remove-medicine', 'PagesController@remove-medicine')->name('remove-medicine');
+Route::get('/remove-medicine', 'PagesController@remove_medicine')->name('remove-medicine');
 
-Route::get('/search-for-medicine', 'PagesController@search-for-medicine')->name('search-for-medicine');
+Route::get('/search-for-medicine', 'PagesController@search_for_medicine')->name('search-for-medicine');
 
 //Route::get('/', function () {
   //  return view('welcome');
