@@ -42,7 +42,7 @@ class UsersController extends Controller
 
  public function all(){
     $user=User::with('role','location')->get();
- $user= User::all();
+
         return view ('users.all', compact('user'));
     }
 

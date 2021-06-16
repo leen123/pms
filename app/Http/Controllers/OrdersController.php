@@ -28,7 +28,7 @@ class OrdersController extends Controller
 
  public function all(){
     $order=Order::with('user')->get();
- $order= Order::all();
+
         return view ('orders.all', compact('order'));
     }
 

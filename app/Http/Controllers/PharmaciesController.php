@@ -28,7 +28,7 @@ class PharmaciesController extends Controller
 
  public function all(){
     $pharmacy=Pharmacy::with('location')->get();
- $pharmacy= Pharmacy::all();
+
         return view ('pharmacies.all', compact('pharmacy'));
     }
 

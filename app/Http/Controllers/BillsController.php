@@ -31,7 +31,7 @@ class BillsController extends Controller
  public function all(){
 
     $bill=Bill::with('warehouse','user')->get();
- $bill= Bill::all();
+
         return view ('bills.all', compact('bill'));
     }
 

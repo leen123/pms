@@ -29,7 +29,7 @@ class OrderdetailsController extends Controller
 
  public function all(){
     $orderdetail=Orderdetail::with('product','order')->get();
- $orderdetail= Orderdetail::all();
+
         return view ('orderdetails.all', compact('orderdetail'));
     }
 

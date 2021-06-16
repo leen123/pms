@@ -35,7 +35,6 @@ class BilldetailsController extends Controller
  public function all(){
 
     $billdetail=Billdetail::with('bill','product')->get();
- $billdetail= Billdetail::all();
         return view ('billdetails.all', compact('billdetail'));
     }
 

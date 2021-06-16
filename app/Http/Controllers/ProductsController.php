@@ -62,8 +62,8 @@ class ProductsController extends Controller
 
  public function all(){
 
-    $product=Product::with('format','type','factory','shelf','caliber','chemicalname','pharmacy')->get();
- $product= Product::all();
+$product=Product::with('format','type','factory','shelf','caliber','chemicalname','pharmacy')->get();
+
         return view ('products.all', compact('product'));
     }
 

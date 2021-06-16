@@ -29,7 +29,7 @@ class WarehouseController extends Controller
 
  public function all(){
     $warehouse=Warehouse::with('location')->get();
- $warehouse= Warehouse::all();
+
         return view ('warehouses.all', compact('warehouse'));
     }
 
