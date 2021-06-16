@@ -17,6 +17,25 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+Route::get('/', 'PagesController@index')->name('index');
+
+Route::get('/contact', 'PagesController@contact')->name('contact');
+
+Route::get('/about', 'PagesController@about')->name('about');
+
+Route::get('/blog', 'PagesController@blog')->name('blog');
+
+Route::get('/blog_details', 'PagesController@blog_details')->name('blog_details');
+
+Route::get('/gallery', 'PagesController@gallery')->name('gallery');
+
+Route::get('/portfolio', 'PagesController@portfolio')->name('portfolio');
+
+Route::get('/portfolio_details', 'PagesController@portfolio_details')->name('portfolio_details');
+
+Route::get('/pricing', 'PagesController@pricing')->name('pricing');
+
+Route::get('/services', 'PagesController@services')->name('services');
 
 
 Route::get('/', function () {

@@ -1,0 +1,68 @@
+html{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/log-in.jpg);
+    background-size: cover;
+}
+.login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.login__form{
+
+		height: 310px;
+		width: 270px;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		color: #fff;
+		padding-top: 60px;
+}
+
+.login__form__header{
+	letter-spacing: 2px;
+	border-bottom: 2px solid #2CB200;
+}
+	
+
+input {
+	width: 200px;
+	color: #fff;
+	margin-top: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 13px;
+	border-radius: 30px;
+	box-shadow: 0 0 0 .5px #2CB200;
+	transition: box-shadow 0.5s ease;
+}
+
+
+.btn{
+	margin-top: 30px;
+	display: inline-block;
+	padding: 10px 30px;
+	text-decoration: none;
+	border-radius: 200px;
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
+	border: 1px solid #2CB200;
+	color: #2CB200;
+}
+
+.btn:link,
+.btn:visited{
+	border: 1px solid #2CB200;
+	color: #2CB200;
+}
+		    
+.btn:hover,
+.btn:active{
+	border: 1px solid #238E00;
+	background-color: #238E00;
+	color: #fff;
+}
