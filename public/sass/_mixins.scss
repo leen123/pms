@@ -15,8 +15,23 @@
 
 .page-header-title{
 	font-size: 2.5rem;
+	font-weight: 600;
 	margin-left: 5rem;
 	margin-top: .5rem;
 	text-decoration: underline;
 	color: var(--color-grey-dark-1);
+}
+
+.edit-pen-button{
+	margin-left: 1rem;
+	height: 2rem;
+	width: 2rem;
+	color: var(--color-grey-dark-1);
+	fill: currentColor;
+	&:active,
+	&:hover,
+	&focus{
+		color: var(--color-primary-dark);
+		fill: currentColor;
+	}
 }

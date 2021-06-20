@@ -22,17 +22,17 @@ document.onclick = function(e){
 
 
 //to show the description of a medicine when pressed on card
-const panels = document.querySelectorAll('.bill__details');
+const panels = document.querySelectorAll('.search-result__description__details');
 panels.forEach( (panel) => {
 	panel.addEventListener('click', () => {
 		removeActiveClasses()
-		panel.classList.add('bill__details--active');
+		panel.classList.add('search-result__description__details--active');
 	})
 })
 
 function removeActiveClasses() {
 	panels.forEach( (panel) => {
-		panel.classList.remove('bill__details--active');
+		panel.classList.remove('search-result__description__details--active');
 	})
 }
 

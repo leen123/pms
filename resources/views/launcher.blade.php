@@ -40,8 +40,8 @@
 
         <div class="launcher__text-box">
           <h1>Always laugh when you can.<br>It is cheap medicine.</h1>
-          <a href="main.html" class="btn btn__launcher btn__launcher--solid">Launch</a>
-          <a href="index.html" class="btn btn__launcher btn__launcher--empty">Log out</a>
+          <a href="{{route('main')}}" class="btn btn__launcher btn__launcher--solid">Launch</a>
+          <a href="{{route('index')}}" class="btn btn__launcher btn__launcher--empty">Log out</a>
         </div>
 
       </header>

@@ -43,6 +43,14 @@ Route::get('/remove-medicine', 'PagesController@remove_medicine')->name('remove-
 
 Route::get('/search-for-medicine', 'PagesController@search_for_medicine')->name('search-for-medicine');
 
+Route::get('/inventory', 'PagesController@inventory')->name('inventory');
+
+Route::get('/return', 'PagesController@return')->name('return');
+
+Route::get('/suppliers', 'PagesController@suppliers')->name('suppliers');
+
+Route::get('/users', 'PagesController@users')->name('users');
+
 //Route::get('/', function () {
   //  return view('welcome');
 //});

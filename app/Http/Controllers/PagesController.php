@@ -11,15 +11,16 @@ class PagesController extends Controller
          return view ('add-medicine');
      }
     public function contact_us(){
+
          return view ('contact-us');
   }
   public function dashboard(){
 
-         return view ('ashboard');
+         return view ('dashboard');
   }
-  public function edit_inputs_setting(){
+  public function edit_inputs_settings(){
 
-         return view ('edit-inputs-setting');
+         return view ('edit-inputs-settings');
   }
 
   public function edit_medicine(){
@@ -63,6 +64,26 @@ public function remove_medicine(){
 public function search_for_medicine(){
 
     return view ('search-for-medicine');
+}
+
+public function inventory(){
+
+    return view ('inventory');
+}
+
+public function suppliers(){
+
+    return view ('suppliers');
+}
+
+public function return(){
+
+    return view ('return');
+}
+
+public function users(){
+
+    return view ('users');
 }
 
 }
