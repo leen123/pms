@@ -33,6 +33,7 @@
         </div>
 
         <div class="search-result search-result--sr">
+
           <span class="search-result__labels">#</span>
           <span class="search-result__labels">Barcode</span>
           <span class="search-result__labels">Name</span>
@@ -44,25 +45,28 @@
           <span class="search-result__labels">Price</span>
           <span class="search-result__labels">Manufacturer</span>
           <span class="search-result__labels">Roof</span>
-          <span class="search-result__labels">EXP</span>
+          <span class="search-result__labels">Image</span>
           <span class="search-result__labels">CXL</span>
 
 
-           <span class="search-result__medicine">1</span>
-          <span class="search-result__medicine">1478954</span>
-          <span class="search-result__medicine">Paracetamol</span>
-          <span class="search-result__medicine">Cetamolphlon</span>
-          <span class="search-result__medicine">Ampoule</span>
-          <span class="search-result__medicine">100ml</span>
-          <span class="search-result__medicine search-result__medicine--middle">5</span>
-          <span class="search-result__medicine search-result__medicine--middle">4$</span>
-          <span class="search-result__medicine search-result__medicine--middle">4.5$</span>
-          <span class="search-result__medicine">Alpha Group</span>
-          <span class="search-result__medicine search-result__medicine--middle">A1</span>
-          <span class="search-result__medicine">10/6/2022</span>
+ @foreach($product as $product)
+
+           <span class="search-result__medicine">{{ $product->id}}</span>
+          <span class="search-result__medicine">{{ $product->barcode}}</span>
+          <span class="search-result__medicine">{{ $product->name}}</span>
+          <span class="search-result__medicine">{{ $product->chemicalname->name}}</span>
+          <span class="search-result__medicine">{{ $product->format->name}}</span>
+          <span class="search-result__medicine">{{ $product->caliber->name}}</span>
+          <span class="search-result__medicine search-result__medicine--middle">{{ $product->limit_Qty}}</span>
+          <span class="search-result__medicine search-result__medicine--middle">{{ $product->net_price}}$</span>
+          <span class="search-result__medicine search-result__medicine--middle">{{ $product->current_price}}$</span>
+          <span class="search-result__medicine">{{ $product->factory->name}}</span>
+          <span class="search-result__medicine search-result__medicine--middle">{{ $product->shelf->number}}</span>
+          <span class="search-result__medicine"><img src="{{asset('upload/'.$product->image)}}" alt="photo"  width="40" height="40"></span>
           <svg class="search-result__icon">
             <use xlink:href="images/sprite.svg#icon-trash"></use>
           </svg>
+          @endforeach
 
         </div>
         <div class="search-result__description search-result__description--sr">

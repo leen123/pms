@@ -30,13 +30,13 @@
 
   <div class="form-group">
     <label for="MGF_date">MGF_date:</label>
-    <input type="text" class="form-control" placeholder="Enter MGF_date" id="MGF_date" name="MGF_date">
+    <input type="date" class="form-control" placeholder="Enter MGF_date" id="MGF_date" name="MGF_date">
   </div>
 
 
   <div class="form-group">
     <label for="expirty_date">expirty_date:</label>
-    <input type="text" class="form-control" placeholder="Enter expirty_date" id="expirty_date" name="expirty_date">
+    <input type="date" class="form-control" placeholder="Enter expirty_date" id="expirty_date" name="expirty_date">
   </div>
 
 

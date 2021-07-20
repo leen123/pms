@@ -18,8 +18,8 @@ class CreateBilldetailsTable extends Migration
             $table->bigInteger('quantity')->nullable();
             $table->double('factory_price')->nullable();
             $table->double('selling_price')->nullable();
-            $table->string('MGF_date')->nullable();
-            $table->string('expirty_date')->nullable();
+            $table->date('MGF_date')->nullable();
+            $table->date('expirty_date')->nullable();
             $table->double('price')->nullable();
 
             $table->bigInteger('bill_id')->unsigned();

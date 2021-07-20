@@ -15,19 +15,21 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+// Route::group(['middleware' => ['role:admin']], function(){
 
+// });
 
 Route::get('/', 'PagesController@index')->name('index');
 
 Route::get('/contact-us', 'PagesController@contact_us')->name('contact-us');
 
-Route::get('/add-medicine', 'PagesController@add_medicine')->name('add-medicine');
+//Route::get('/add-medicine', 'PagesController@add_medicine')->name('add-medicine');
 
 Route::get('/dashboard', 'PagesController@dashboard')->name('dashboard');
 
 Route::get('/edit-inputs-settings', 'PagesController@edit_inputs_settings')->name('edit-inputs-settings');
 
-Route::get('/edit-medicine', 'PagesController@edit_medicine')->name('edit-medicine');
+//Route::get('/edit-medicine', 'PagesController@edit_medicine')->name('edit-medicine');
 
 Route::get('/general-settings', 'PagesController@general_settings')->name('general-settings');
 
@@ -41,7 +43,7 @@ Route::get('/new-bill', 'PagesController@new_bill')->name('new-bill');
 
 Route::get('/remove-medicine', 'PagesController@remove_medicine')->name('remove-medicine');
 
-Route::get('/search-for-medicine', 'PagesController@search_for_medicine')->name('search-for-medicine');
+//Route::get('/search-for-medicine', 'PagesController@search_for_medicine')->name('search-for-medicine');
 
 Route::get('/inventory', 'PagesController@inventory')->name('inventory');
 
@@ -170,10 +172,11 @@ Route::get('/locations/delete/{id}', 'LocationsController@delete')->name('delete
 
 ////////////////////////////////////////////////////////
 //ProductsController
-Route::get('/products/add', 'ProductsController@add')->name('add-product');
+Route::get('/add-medicine', 'ProductsController@add')->name('add-medicine');
 Route::post('/products/store', 'ProductsController@store')->name('store-product');
-Route::get('/products/all', 'ProductsController@all')->name('all-products');
-Route::get('/products/edit/{id}', 'ProductsController@edit')->name('edit-product');
+//Route::get('/products/all', 'ProductsController@all')->name('all-products');
+Route::get('/search-for-medicine', 'ProductsController@all')->name('search-for-medicine');
+Route::get('/edit-medicine/{id}', 'ProductsController@edit')->name('edit-medicine');
 Route::post('/products/edit/{id}', 'ProductsController@update')->name('edit-product');
 Route::get('/products/delete/{id}', 'ProductsController@delete')->name('delete-product');
 

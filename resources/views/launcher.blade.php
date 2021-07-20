@@ -31,7 +31,7 @@
 
           <div class="header__user">
             <a href="my-account.html" class="header__user__link">
-              <img src="images/user.jpg" alt="User Photo" class="header__user__photo header--launcher__user__photo">
+              <img src="images/user1.jpg" alt="User Photo" class="header__user__photo header--launcher__user__photo">
               <span class="header__user__name">Yasser</span>
             </a>
           </div>

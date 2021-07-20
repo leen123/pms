@@ -79,7 +79,7 @@
                         </a>
                       </li>
                       <li class="nav__list__item  nav__list__item--active">
-                        <a href="{{route('edit-medicine')}}" class="nav__list__item__link nav__list__item__link--active">
+                        <a href="" class="nav__list__item__link nav__list__item__link--active">
                           <svg class="nav__list__item__icon  nav__list__item__icon--active">
                             <use xlink:href="images/sprite.svg#icon-pencil"></use>
                           </svg>

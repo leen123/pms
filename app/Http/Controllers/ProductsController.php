@@ -24,7 +24,7 @@ class ProductsController extends Controller
         $caliber=Caliber::all();
         $chemicalname=Chemicalname::all();
         $pharmacy=Pharmacy::all();
-        return view ('products.add', compact('format','type','factory','shelf','caliber','chemicalname','pharmacy'));
+        return view ('add-medicine', compact('format','type','factory','shelf','caliber','chemicalname','pharmacy'));
     }
 
   public function store(Request $request){
@@ -64,7 +64,7 @@ class ProductsController extends Controller
 
 $product=Product::with('format','type','factory','shelf','caliber','chemicalname','pharmacy')->get();
 
-        return view ('products.all', compact('product'));
+        return view ('search-for-medicine', compact('product'));
     }
 
    public function edit($id){
@@ -78,7 +78,7 @@ $product=Product::with('format','type','factory','shelf','caliber','chemicalname
     $pharmacy=Pharmacy::all();
       $product= Product::where('id','=',$id)->first();
 
-        return view ('products.edit',compact('product','format','type','factory','shelf','caliber','chemicalname','pharmacy'));
+        return view ('edit-medicine',compact('product','format','type','factory','shelf','caliber','chemicalname','pharmacy'));
     }
 
     public function update($id,Request $request){
@@ -109,13 +109,13 @@ $product=Product::with('format','type','factory','shelf','caliber','chemicalname
  $product->caliber_id = $request->caliber_id;
  $product->chemicalname_id = $request->chemicalname_id;
  $product->save();
-        return redirect('/products/all');
+        return redirect('/search-for-medicine');
     }
 
     public function delete($id){
 
      $product= Product::find($id);
      $product->delete();
-       return redirect('/products/all');
+       return redirect('/search-for-medicine');
     }
 }

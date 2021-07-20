@@ -9,6 +9,7 @@
             <button class="btn btn__hero btn__hero--cancel btn__hero">Restore</button>
           </div>
         </div>
+
         <div class="edit-inputs__body">
         	<div class="edit-inputs__column">
         		<div class="edit-inputs__column__header">
@@ -16,8 +17,9 @@
         		</div>
         		<div class="edit-inputs__column__details">
         			<div class="edit-inputs__column__details__row">
-        				<span class="edit-inputs__column__details__row__number">1-</span>
-        				<input id="edit-inputs-format-1" class="edit-inputs__column__details__row__name" value="Liquid" disabled>
+
+        				<span class="edit-inputs__column__details__row__number">1</span>
+        				<input id="edit-inputs-format-1" class="edit-inputs__column__details__row__name" value="liquid" disabled>
         				<label  for="edit-inputs-format-1" class="edit-inputs__column__details__row__buttons edit-inputs__column__details__row__buttons--edit">
           				<svg class="nav__list__item__icon">
                     <use xlink:href="images/sprite.svg#icon-pencil"></use>
@@ -28,14 +30,20 @@
                     <use xlink:href="images/sprite.svg#icon-trash"></use>
                   </svg>
         				</span>
+
         			</div>
         		</div>
+                <form action="{{route('store-format')}}" method="POST">
+                    @csrf
         		<div class="edit-inputs__column__footer">
         			<label for="add-new-format" class="edit-inputs__column__footer__label">New Format:</label>
-        			<input type="text" id="add-new-format" placeholder="Add New Format" class="edit-inputs__column__footer__input">
-        			<button class="edit-inputs__column__footer__button">Add</button>
+        			<input type="text" placeholder="Add New Format" class="edit-inputs__column__footer__input" id="name" name="name">
+        			<button type="submit" class="edit-inputs__column__footer__button">Add</button>
         		</div>
+                </form>
         	</div>
+
+
 
         	<div class="edit-inputs__column">
         		<div class="edit-inputs__column__header">

@@ -2,14 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Product;
+use App\Format;
+use App\Type;
+use App\Factory;
+use App\Shelf;
+use App\Caliber;
+use App\Chemicalname;
+use App\Pharmacy;
 
 class PagesController extends Controller
 {
     public function add_medicine(){
 
-         return view ('add-medicine');
-     }
+        $format=Format::all();
+        $type=Type::all();
+        $factory=Factory::all();
+        $shelf=Shelf::all();
+        $caliber=Caliber::all();
+        $chemicalname=Chemicalname::all();
+        $pharmacy=Pharmacy::all();
+        return view ('add-medicine', compact('format','type','factory','shelf','caliber','chemicalname','pharmacy'));
+    }
+
     public function contact_us(){
 
          return view ('contact-us');
@@ -20,7 +37,8 @@ class PagesController extends Controller
   }
   public function edit_inputs_settings(){
 
-         return view ('edit-inputs-settings');
+    $format=Format::all();
+         return view ('edit-inputs-settings', compact('format'));
   }
 
   public function edit_medicine(){

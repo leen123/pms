@@ -45,8 +45,8 @@ class CreateProductsTable extends Migration
             $table->bigInteger('caliber_id')->unsigned();
             $table->foreign('caliber_id')->references('id')->on('calibers')->onDelete('cascade');
 
-            $table->bigInteger('chemicalname_id')->unsigned();
-            $table->foreign('chemicalname_id')->references('id')->on('chemicalnames')->onDelete('cascade');
+            $table->bigInteger('chemicalname_id')->unsigned()->nullable();
+          //  $table->foreign('chemicalname_id')->references('id')->on('chemicalnames')->onDelete('cascade');
 
             $table->timestamps();
         });

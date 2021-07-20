@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
+    protected $guarded = ['id','created_at','updated_at'];
+
     public function state(){
         return $this->belongsTo('App\State','state_id');
             }
