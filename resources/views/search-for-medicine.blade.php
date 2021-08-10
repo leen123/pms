@@ -54,7 +54,7 @@
            <span class="search-result__medicine">{{ $product->id}}</span>
           <span class="search-result__medicine">{{ $product->barcode}}</span>
           <span class="search-result__medicine">{{ $product->name}}</span>
-          <span class="search-result__medicine">{{ $product->chemicalname->name}}</span>
+         <span class="search-result__medicine">{{ $product->chemicalname->name}}</span>
           <span class="search-result__medicine">{{ $product->format->name}}</span>
           <span class="search-result__medicine">{{ $product->caliber->name}}</span>
           <span class="search-result__medicine search-result__medicine--middle">{{ $product->limit_Qty}}</span>
@@ -63,12 +63,21 @@
           <span class="search-result__medicine">{{ $product->factory->name}}</span>
           <span class="search-result__medicine search-result__medicine--middle">{{ $product->shelf->number}}</span>
           <span class="search-result__medicine"><img src="{{asset('upload/'.$product->image)}}" alt="photo"  width="40" height="40"></span>
-          <svg class="search-result__icon">
-            <use xlink:href="images/sprite.svg#icon-trash"></use>
-          </svg>
+          <span class="edit-inputs__column__details__row__buttons edit-inputs__column__details__row__buttons--remove">
+          <a  href="/products/delete/{{$product->id}}"><svg class="search-result__icon">
+            <use xlink:href="images/sprite.svg#icon-trash" ></use>
+          </svg></a>
+
+          <a  href="/edit-medicine/{{$product->id}}" > <svg class="nav__list__item__icon">
+            <use xlink:href="images/sprite.svg#icon-pencil"></use>
+          </svg></a>
+          </span>
+
           @endforeach
 
+
         </div>
+
         <div class="search-result__description search-result__description--sr">
           <div class="search-result__description__text">Description:</div>
 

@@ -91,7 +91,7 @@ $product=Product::with('format','type','factory','shelf','caliber','chemicalname
  /////////////////////////////
  if(isset($request->image)){
     $image_name=rand().".".$request->image->getClientOriginalExtension();
-    $product->imag=$image_name;
+    $product->image=$image_name;
     $request->image->move('upload',$image_name);
    }
    /////////////////////////////

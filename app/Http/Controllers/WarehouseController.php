@@ -11,9 +11,9 @@ use App\Location;
 class WarehouseController extends Controller
 {
     public function add(){
-
+        $warehouse=Warehouse::all();
         $location=Location::all();
-        return view ('warehouses.add',compact('location'));
+        return view ('suppliers',compact('location','warehouse'));
     }
 
   public function store(Request $request){
@@ -46,13 +46,13 @@ class WarehouseController extends Controller
  $warehouse =Warehouse::find($id);
  $warehouse->name = $request->name;
  $warehouse->save();
-        return redirect('/warehouses/all');
+        return redirect('/suppliers');
     }
 
     public function delete($id){
 
      $warehouse= Warehouse::find($id);
      $warehouse->delete();
-       return redirect('/warehouses/all');
+       return redirect('/suppliers');
     }
 }

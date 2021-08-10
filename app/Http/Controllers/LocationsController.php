@@ -16,14 +16,13 @@ class LocationsController extends Controller
         return view ('locations.add',compact('state'));
     }
 
-  public function store(StoreLocationRequest $request){
-      $data = $request->validated();
-      Location::create($data);
-
-//  $location = new Location;
-//  $location->name = $request->name;
-//  //$location->state_id= $request->state_id;
-//  $location->save();
+  public function store(Request $request){
+    //  $data = $request->validated();
+    //  Location::create($data);
+ $location = new Location;
+ $location->name = $request->name;
+ $location->state_id= $request->state_id;
+  $location->save();
 
         return back();
     }
@@ -55,6 +54,6 @@ class LocationsController extends Controller
 
      $location= Location::find($id);
      $location->delete();
-       return redirect('/locations/all');
+       return redirect('/site');
     }
 }

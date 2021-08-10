@@ -45,6 +45,6 @@ class TypesController extends Controller
 
      $type= Type::find($id);
      $type->delete();
-       return redirect('/types/all');
+       return redirect('/edit-inputs-settings');
     }
 }

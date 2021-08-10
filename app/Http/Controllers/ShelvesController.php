@@ -46,6 +46,6 @@ class ShelvesController extends Controller
 
      $shelf= Shelf::find($id);
      $shelf->delete();
-       return redirect('/shelves/all');
+       return redirect('/edit-inputs-settings');
     }
 }

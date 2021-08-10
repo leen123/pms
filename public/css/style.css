@@ -77,7 +77,7 @@ h1, h2, h3 {
   padding-top: 1rem; }
 
 .header {
- /* max-width: 114rem;*/
+  max-width: 114rem;
   margin: 0 11.3rem;
   display: flex;
   justify-content: space-between;
@@ -544,16 +544,25 @@ h1, h2, h3 {
         outline: none;
         background-color: var(--color-grey-light-3);
         box-shadow: 0 0 0 0.5px var(--color-primary); }
-      .search-bar__form__input--barcode {
+      .search-bar__form__input--barcode, .search-bar__form__input--location {
         margin-right: -3.5rem;
         width: 18rem; }
-        .search-bar__form__input--barcode:focus {
+        .search-bar__form__input--barcode:focus, .search-bar__form__input--location:focus {
+          width: 20rem; }
+      .search-bar__form__input--username {
+        margin-right: -3.5rem;
+        width: 18.7rem; }
+        .search-bar__form__input--username:focus {
           width: 20rem; }
       .search-bar__form__input--name {
         margin-right: -3.5rem;
         width: 16rem; }
         .search-bar__form__input--name:focus {
           width: 18rem; }
+      .search-bar__form__input--supplier {
+        width: 18rem; }
+        .search-bar__form__input--supplier:focus {
+          width: 20rem; }
       .search-bar__form__input--quantity {
         width: 11rem; }
         .search-bar__form__input--quantity:focus {
@@ -565,6 +574,8 @@ h1, h2, h3 {
         .search-bar__form__input--button:focus, .search-bar__form__input--button:hover {
           color: #fff;
           background-color: var(--color-primary-dark); }
+      .search-bar__form__input__options {
+        color: var(--color-grey-dark-1); }
     .search-bar__form__button {
       border: none;
       background-color: var(--color-grey-light-2); }
@@ -579,6 +590,8 @@ h1, h2, h3 {
         width: 5rem;
         fill: var(--color-grey-dark-1);
         margin-right: 5rem; }
+  .search-bar--suppliers {
+    margin-left: 5rem; }
   .search-bar--edit-product {
     height: auto; }
 
@@ -600,6 +613,23 @@ h1, h2, h3 {
   /* Firefox */ }
   .search-result::-webkit-scrollbar {
     display: none; }
+  .search-result--new-bill {
+    grid-template-columns: 1.6rem repeat(12, auto);
+    border: none;
+    height: 24vh; }
+  .search-result--users, .search-result--suppliers, .search-result--departments {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 13rem;
+    height: 20vh;
+    border: none;
+    grid-template-columns: 1.6rem repeat(10, auto); }
+  .search-result--suppliers {
+    height: 28vh;
+    grid-template-columns: 1.6rem repeat(9, auto); }
+  .search-result--departments {
+    height: 28vh;
+    grid-template-columns: 1.6rem repeat(8, auto); }
   .search-result--sr {
     height: 32vh;
     grid-template-columns: 1.6rem repeat(12, auto); }
@@ -668,10 +698,10 @@ h1, h2, h3 {
         opacity: 1; }
       .search-result__description__details--active {
         flex: 2; }
-        .search-result__description__details--active .bill__details__text {
+        .search-result__description__details--active .search-result__description__details__text {
           opacity: 1;
           transition: opacity 0.3s ease-in .8s; }
-        .search-result__description__details--active .bill__details__label {
+        .search-result__description__details--active .search-result__description__details__label {
           opacity: 0;
           transition: opacity 0.3s ease-in 0.4s; }
       .search-result__description__details__text {
@@ -686,20 +716,20 @@ h1, h2, h3 {
 /*
 .search-result-container{
 	margin-top: 1rem;
-	margin-bottom: 0.4rem;
+	margin-bottom: 0.4rem; 
 	display: flex;
 	flex-direction: row;
 	font-size: 1.6rem;
 	justify-content: space-around;
 	height: 40vh;
-
+	
 	border-bottom: 1px solid var(--color-grey-light-4);
 
 	&__data{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	}
+	}	
 	&__labels{
 		color: var(--color-grey-dark-1);
 		margin-bottom: 1rem;
@@ -818,6 +848,21 @@ h1, h2, h3 {
           color: var(--color-grey-dark-1); }
           .product__form__input__button--red:focus, .product__form__input__button--red:hover {
             background-color: var(--color-secondary); }
+
+.new-bill {
+  font-weight: 600; }
+  .new-bill__results {
+    border-top: 1px solid var(--color-grey-light-4);
+    margin-top: 3rem;
+    margin-left: 3.5rem;
+    padding-top: 1rem;
+    width: 85%;
+    position: relative; }
+  .new-bill__btns {
+    position: absolute;
+    right: 17rem;
+    bottom: 5rem;
+    margin-top: 2rem; }
 
 .inventory {
   display: grid;
@@ -1058,6 +1103,70 @@ h1, h2, h3 {
           background-color: var(--color-primary-dark);
           outline: none; }
 
+.users,
+.suppliers,
+.departments {
+  font-weight: 600; }
+  .users__form,
+  .suppliers__form,
+  .departments__form {
+    font-size: 1.6rem;
+    padding: 2rem 2.5rem 0 5rem;
+    color: var(--color-grey-dark-1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0rem; }
+    .users__form__group,
+    .suppliers__form__group,
+    .departments__form__group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem; }
+    .users__form__label,
+    .suppliers__form__label,
+    .departments__form__label {
+      width: 12.5rem; }
+    .users__form__input,
+    .suppliers__form__input,
+    .departments__form__input {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      background-color: var(--color-grey-light-2);
+      border: none;
+      padding: .7rem 2rem;
+      border-radius: 100px;
+      transition: all .5s ease;
+      width: 20rem; }
+      .users__form__input--textarea,
+      .suppliers__form__input--textarea,
+      .departments__form__input--textarea {
+        max-width: 20rem;
+        min-width: 20rem;
+        max-height: 7rem;
+        min-height: 7rem;
+        border-radius: 15px; }
+        .users__form__input--textarea:focus,
+        .suppliers__form__input--textarea:focus,
+        .departments__form__input--textarea:focus {
+          max-width: 23rem;
+          min-width: 23rem; }
+      .users__form__input:focus,
+      .suppliers__form__input:focus,
+      .departments__form__input:focus {
+        width: 23rem;
+        outline: none;
+        background-color: var(--color-grey-light-3);
+        box-shadow: 0 0 0 0.5px var(--color-primary); }
+  .users__btns,
+  .suppliers__btns,
+  .departments__btns {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    padding-left: 102rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-grey-light-4); }
+
 .my-account {
   width: 96.5rem;
   margin: 0 25rem;
@@ -1257,6 +1366,8 @@ h1, h2, h3 {
   margin-top: .5rem;
   text-decoration: underline;
   color: var(--color-grey-dark-1); }
+  .page-header-title--suppliers {
+    margin-left: 0; }
 
 .edit-pen-button {
   margin-left: 1rem;

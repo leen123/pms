@@ -39,13 +39,13 @@ class StatesController extends Controller
  $state =State::find($id);
  $state->name = $request->name;
  $state->save();
-        return redirect('/states/all');
+        return redirect('/site');
     }
 
     public function delete($id){
 
      $state= State::find($id);
      $state->delete();
-       return redirect('/states/all');
+       return redirect('/site');
     }
 }

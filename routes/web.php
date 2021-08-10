@@ -29,6 +29,8 @@ Route::get('/dashboard', 'PagesController@dashboard')->name('dashboard');
 
 Route::get('/edit-inputs-settings', 'PagesController@edit_inputs_settings')->name('edit-inputs-settings');
 
+Route::get('/site', 'PagesController@site')->name('site');
+
 //Route::get('/edit-medicine', 'PagesController@edit_medicine')->name('edit-medicine');
 
 Route::get('/general-settings', 'PagesController@general_settings')->name('general-settings');
@@ -48,8 +50,6 @@ Route::get('/remove-medicine', 'PagesController@remove_medicine')->name('remove-
 Route::get('/inventory', 'PagesController@inventory')->name('inventory');
 
 Route::get('/return', 'PagesController@return')->name('return');
-
-Route::get('/suppliers', 'PagesController@suppliers')->name('suppliers');
 
 Route::get('/users', 'PagesController@users')->name('users');
 
@@ -76,7 +76,7 @@ Route::get('/formats/delete/{id}', 'FormatsController@delete')->name('delete-for
 
 ////////////////////////////////////////////////////////
 //warehousescontroller
-Route::get('/warehouses/add', 'WarehouseController@add')->name('add-warehouse');
+Route::get('/suppliers', 'WarehouseController@add')->name('suppliers');
 Route::post('/warehouses/store', 'WarehouseController@store')->name('store-warehouse');
 Route::get('/warehouses/all', 'WarehouseController@all')->name('all-warehouses');
 Route::get('/warehouses/edit/{id}', 'WarehouseController@edit')->name('edit-warehouse');
@@ -133,19 +133,6 @@ Route::get('/bills/delete/{id}', 'BillsController@delete')->name('delete-bill');
 
 ///////////////////////////////////////////////////////////
 
-
-////////////////////////////////////////////////////////
-//billscontroller
-Route::get('/bills/add', 'BillsController@add')->name('add-bill');
-Route::post('/bills/store', 'BillsController@store')->name('store-bill');
-Route::get('/bills/all', 'BillsController@all')->name('all-bills');
-Route::get('/bills/edit/{id}', 'BillsController@edit')->name('edit-bill');
-Route::post('/bills/edit/{id}', 'BillsController@update')->name('edit-bill');
-Route::get('/bills/delete/{id}', 'BillsController@delete')->name('delete-bill');
-
-///////////////////////////////////////////////////////////
-
-
 ////////////////////////////////////////////////////////
 //billdetailscontroller
 Route::get('/billdetails/add', 'BilldetailsController@add')->name('add-billdetail');
@@ -177,14 +164,14 @@ Route::post('/products/store', 'ProductsController@store')->name('store-product'
 //Route::get('/products/all', 'ProductsController@all')->name('all-products');
 Route::get('/search-for-medicine', 'ProductsController@all')->name('search-for-medicine');
 Route::get('/edit-medicine/{id}', 'ProductsController@edit')->name('edit-medicine');
-Route::post('/products/edit/{id}', 'ProductsController@update')->name('edit-product');
+Route::post('/edit-medicine/{id}', 'ProductsController@update')->name('edit-product');
 Route::get('/products/delete/{id}', 'ProductsController@delete')->name('delete-product');
 
 ///////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////
 //PharmaciesController
-Route::get('/pharmacies/add', 'PharmaciesController@add')->name('add-pharmacy');
+Route::get('/departments', 'PharmaciesController@add')->name('departments');
 Route::post('/pharmacies/store', 'PharmaciesController@store')->name('store-pharmacy');
 Route::get('/pharmacies/all', 'PharmaciesController@all')->name('all-pharmacies');
 Route::get('/pharmacies/edit/{id}', 'PharmaciesController@edit')->name('edit-pharmacy');

@@ -2,7 +2,6 @@
 @extends('master')
 @section('content')
 
-      <main>
         <div class="product">
           <h3 class="page-header-title">Add New Product:</h3>
 

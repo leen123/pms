@@ -272,9 +272,17 @@
 			    background-color: var(--color-grey-light-3);
 			    box-shadow: 0 0 0 .5px var(--color-primary);
 			}
-		    &--barcode{
+		    &--barcode,
+		    &--location{
 		    	margin-right: -3.5rem;
 		    	width: 18rem;
+		    	&:focus {
+				    width: 20rem;
+				}
+		    }
+		    &--username{
+		    	margin-right: -3.5rem;
+		    	width: 18.7rem;
 		    	&:focus {
 				    width: 20rem;
 				}
@@ -284,6 +292,12 @@
 		    	width: 16rem;
 		    	&:focus {
 				    width: 18rem;
+				}
+		   	}
+		   	&--supplier{
+		    	width: 18rem;
+		    	&:focus {
+				    width: 20rem;
 				}
 		   	}
 		   	&--quantity{
@@ -301,7 +315,10 @@
 				    color: #fff;
 				    background-color: var(--color-primary-dark);
 				}
-		   	}  
+		   	} 
+		   	&__options{
+				color: var(--color-grey-dark-1);
+			}
 		}
 		&__button {
 		    border: none;
@@ -321,6 +338,9 @@
 			    margin-right: 5rem;
 		    }
 		}
+	}
+	&--suppliers{
+		margin-left: 5rem;
 	}
 	&--edit-product{
 		height: auto;
@@ -346,6 +366,29 @@
   	scrollbar-width: none;  /* Firefox */
 	&::-webkit-scrollbar { // to hide the scrollbar for chrome, safari, and safari
  	 	display: none;
+	}
+	&--new-bill{
+		grid-template-columns: 1.6rem repeat(12, auto);
+		border: none;
+		height: 24vh;
+	}
+	&--users,
+	&--suppliers,
+	&--departments{
+		margin-top: 1rem;
+		margin-left: 5rem;
+		margin-right: 13rem;
+		height: 20vh;
+		border: none;
+		grid-template-columns: 1.6rem repeat(10, auto);
+	}
+	&--suppliers{
+		height: 28vh;
+		grid-template-columns: 1.6rem repeat(9, auto);
+	}
+	&--departments{
+		height: 28vh;
+		grid-template-columns: 1.6rem repeat(8, auto);
 	}
 	&--sr{
 		height: 32vh;
@@ -387,6 +430,7 @@
 			color: var(--color-primary-dark);
 			fill: currentColor;
 		}
+
 	}
 	&__description{
 		margin-left: 3.5rem;
@@ -429,13 +473,12 @@
 			}
 			&--active{
 				flex: 2;
-				.bill__details__text{
+				.search-result__description__details__text{
 					opacity: 1;
 					transition: opacity 0.3s ease-in .8s; //0.4 delay
 				}
-				.bill__details__label{
+				.search-result__description__details__label{
 					opacity: 0;
-						
 					transition: opacity 0.3s ease-in 0.4s; //0.4 delay
 				}
 			}
@@ -620,6 +663,31 @@
 				}
 			}
 		}
+		&__edit{
+
+		}
+	}
+}
+////////////////////////////
+//////////////******************NEW BILL*****************//////////////////////
+////////////////////////////
+.new-bill{
+	font-weight: 600;
+
+	&__results{
+		border-top: 1px solid var(--color-grey-light-4);
+		margin-top: 3rem;
+		margin-left: 3.5rem;
+		padding-top: 1rem;
+		width: 85%;
+		position: relative;
+	}
+
+	&__btns{
+		position: absolute;
+		right: 17rem;
+		bottom: 5rem;
+		margin-top: 2rem;
 	}
 }
 
@@ -716,7 +784,6 @@
 		margin-left: 1rem;
 	}
 }
-
 
 ////////////////////////////
 //////////////******************GENERAL SETTINGS*****************//////////////////////
@@ -948,6 +1015,67 @@
 }
 
 ////////////////////////////
+//////////////******************USERS & SUPPLIERS & Departments*****************//////////////////////
+////////////////////////////
+.users,
+.suppliers,
+.departments{
+	font-weight: 600;
+	&__form{//repeated
+		font-size: 1.6rem;
+		padding: 2rem 2.5rem 0 5rem;
+		color: var(--color-grey-dark-1);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 0rem;
+		&__group{
+			display: flex;
+			align-items: center;
+			margin-bottom: 1.5rem;
+		}
+		&__label{
+			width: 12.5rem;
+		}
+		&__input {
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+			background-color: var(--color-grey-light-2);
+			border: none;
+			padding: .7rem 2rem;
+			border-radius: 100px;
+			transition: all .5s ease;
+			width: 20rem;
+			&--textarea{
+				max-width: 20rem;
+				min-width: 20rem;
+				max-height: 7rem;
+				min-height: 7rem;
+				border-radius: 15px;
+				&:focus{
+					max-width: 23rem;
+					min-width: 23rem;
+				}
+			}
+			&:focus {
+			 	width: 23rem;
+				outline: none;
+				background-color: var(--color-grey-light-3);
+				box-shadow: 0 0 0 .5px var(--color-primary);
+			}
+		}
+	}
+	&__btns{
+		margin-top: 1rem;
+		//margin-right: 13rem;
+		margin-left: 5rem;
+		padding-left: 102rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--color-grey-light-4);
+	}
+}
+
+////////////////////////////
 //////////////******************MY ACCOUNT*****************//////////////////////
 ////////////////////////////
 
@@ -1020,6 +1148,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-column-gap: 5rem;
+
 		&__group{
 			display: flex;
 			align-items: center;
@@ -1027,7 +1156,6 @@
 		}
 		&__label{
 			width: 15.5rem;
-
 		}
 		&__edit{
 

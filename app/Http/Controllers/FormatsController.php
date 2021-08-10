@@ -45,7 +45,7 @@ class FormatsController extends Controller
 
      $format= Format::find($id);
      $format->delete();
-       return redirect('/formats/all');
+       return redirect('/edit-inputs-settings');
     }
 
 }

@@ -12,6 +12,9 @@ use App\Shelf;
 use App\Caliber;
 use App\Chemicalname;
 use App\Pharmacy;
+use App\State;
+use App\Location;
+use App\Warehouse;
 
 class PagesController extends Controller
 {
@@ -35,11 +38,26 @@ class PagesController extends Controller
 
          return view ('dashboard');
   }
+
   public function edit_inputs_settings(){
 
     $format=Format::all();
-         return view ('edit-inputs-settings', compact('format'));
+    $caliber=Caliber::all();
+    $type=Type::all();
+    $factory=Factory::all();
+    $shelf=Shelf::all();
+    $chemicalname=Chemicalname::all();
+         return view ('edit-inputs-settings',  compact('format','type','factory','shelf','caliber','chemicalname'));
   }
+
+  public function site(){
+
+    $state=State::all();
+    $location=Location::all();
+    $warehouse=Warehouse::all();
+         return view ('site',  compact('state','location','warehouse'));
+  }
+
 
   public function edit_medicine(){
 
@@ -87,11 +105,6 @@ public function search_for_medicine(){
 public function inventory(){
 
     return view ('inventory');
-}
-
-public function suppliers(){
-
-    return view ('suppliers');
 }
 
 public function return(){

@@ -10,9 +10,9 @@ use App\Location;
 class PharmaciesController extends Controller
 {
     public function add(){
-
+        $pharmacy=Pharmacy::all();
         $location=Location::all();
-        return view ('pharmacies.add',compact('location'));
+        return view ('departments',compact('location','pharmacy'));
     }
 
   public function store(Request $request){
@@ -48,13 +48,13 @@ class PharmaciesController extends Controller
  $pharmacy->phone = $request->phone;
  $pharmacy->location_id = $request->location_id;
  $pharmacy->save();
-        return redirect('/pharmacies/all');
+        return redirect('departments');
     }
 
     public function delete($id){
 
      $pharmacy= Pharmacy::find($id);
      $pharmacy->delete();
-       return redirect('/pharmacies/all');
+       return redirect('departments');
     }
 }

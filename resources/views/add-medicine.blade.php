@@ -12,18 +12,18 @@
 
                    <div class="product__form__group">
                     <label for="barcode"  class="product__form__label">Barcode:</label>
-                    <input type="text" class="product__form__input" placeholder="Enter barcode" id="barcode" name="barcode">
+                    <input type="text" class="product__form__input"   placeholder="Enter barcode" required id="barcode" name="barcode">
                   </div>
 
              <div class="product__form__group">
               <label for="name" class="product__form__label">Name:</label>
-              <input type="text"  class="product__form__input" placeholder="Name"  id="name" name="name">
+              <input type="text"  class="product__form__input" required placeholder="Name"  id="name" name="name" >
             </div>
 
             <div class="product__form__group">
     <label for="chemicalname_id"  class="product__form__label" >chemicalname:</label>
-    <select class="product__form__input" name="chemicalname_id">
-        <option value="" class="product__form__input__options">non</option>
+    <select class="product__form__input" name="chemicalname_id" required>
+        <option  class="product__form__input__options" value=""></option>
       @foreach($chemicalname as $chemicalname)
       <option  class="product__form__input__options" value="{{$chemicalname->id}}">{{$chemicalname->name}}</option>
       @endforeach
@@ -31,9 +31,9 @@
    </div>
 
    <div class="product__form__group">
-   <label for="format_id" class="product__form__label">format:</label>
-   <select class="product__form__input" name="format_id">
-    <option value="" class="product__form__input__options">non</option>
+   <label for="format_id" class="product__form__label"  >format:</label>
+   <select class="product__form__input" name="format_id" required >
+    <option  class="product__form__input__options" value=""></option>
      @foreach($format as $format)
      <option class="product__form__input__options" value="{{$format->id}}">{{$format->name}}</option>
      @endforeach
@@ -42,8 +42,8 @@
 
             <div class="product__form__group">
     <label for="caliber_id" class="product__form__label">Dose:</label>
-    <select class="product__form__input" name="caliber_id">
-        <option value="" class="product__form__input__options">non</option>
+    <select class="product__form__input" name="caliber_id" required>
+        <option  class="product__form__input__options" value=""></option>
       @foreach($caliber as $caliber)
       <option class="product__form__input__options" value="{{$caliber->id}}">{{$caliber->name}}</option>
       @endforeach
@@ -53,8 +53,8 @@
 
    <div class="product__form__group">
     <label for="pharmacy_id"  class="product__form__label">pharmacy:</label>
-    <select class="product__form__input" name="pharmacy_id">
-        <option value="" class="product__form__input__options">non</option>
+    <select class="product__form__input" name="pharmacy_id" required>
+        <option  class="product__form__input__options" value=""></option>
       @foreach($pharmacy as $pharmacy)
       <option class="product__form__input__options" value="{{$pharmacy->id}}">{{$pharmacy->name}}</option>
       @endforeach
@@ -92,8 +92,8 @@
 
             <div class="product__form__group">
     <label for="type_id"  class="product__form__label">type:</label>
-    <select  class="product__form__input" name="type_id">
-        <option value="" class="product__form__input__options">non</option>
+    <select  class="product__form__input" name="type_id" required>
+        <option  class="product__form__input__options" value=""></option>
       @foreach($type as $type)
       <option  class="product__form__input__options" value="{{$type->id}}">{{$type->name}}</option>
       @endforeach
@@ -103,8 +103,8 @@
 
    <div class="product__form__group">
     <label for="factory_id"  class="product__form__label">Manufacturer:</label>
-    <select class="product__form__input" name="factory_id">
-        <option value="" class="product__form__input__options">non</option>
+    <select class="product__form__input" name="factory_id" required>
+        <option  class="product__form__input__options" value=""></option>
       @foreach($factory as $factory)
       <option class="product__form__input__options" value="{{$factory->id}}">{{$factory->name}}</option>
       @endforeach
@@ -113,8 +113,8 @@
 
             <div class="product__form__group">
     <label for="shelf_id" class="product__form__label">Roof:</label>
-    <select class="product__form__input" name="shelf_id">
-        <option value="" class="product__form__input__options">non</option>
+    <select class="product__form__input" name="shelf_id" required>
+        <option  class="product__form__input__options" value=""></option>
       @foreach($shelf as $shelf)
       <option class="product__form__input__options" value="{{$shelf->id}}">{{$shelf->number}}</option>
       @endforeach
@@ -136,7 +136,7 @@
               -->
               <div class="product__form__group">
                 <label for="description"  class="product__form__label">Description:</label>
-                <textarea  class="product__form__input product__form__input__description" required placeholder="Enter description" name="description"></textarea>
+                <textarea  class="product__form__input product__form__input__description" placeholder="Enter description" name="description"></textarea>
               </div>
 
               <div class="product__form__group">
@@ -147,22 +147,22 @@
 
      <div class="product__form__group">
     <label for="application"  class="product__form__label">Application:</label>
-    <textarea  class="product__form__input product__form__input__description" required placeholder="Enter application" name="application"></textarea>
+    <textarea  class="product__form__input product__form__input__description"placeholder="Enter application" name="application"></textarea>
   </div>
 
   <div class="product__form__group">
     <label for="composition"  class="product__form__label">Composition:</label>
-    <textarea   class="product__form__input product__form__input__description" required placeholder="Enter composition" name="composition"></textarea>
+    <textarea   class="product__form__input product__form__input__description" placeholder="Enter composition" name="composition"></textarea>
   </div>
 
   <div class="product__form__group">
     <label for="side_effects" class="product__form__label">Side_effects:</label>
-    <textarea c class="product__form__input product__form__input__description" required placeholder="Enter side_effects" name="side_effects"></textarea>
+    <textarea c class="product__form__input product__form__input__description"  placeholder="Enter side_effects" name="side_effects"></textarea>
   </div>
 
   <div class="product__form__group">
     <label for="notes"  class="product__form__label">Notes:</label>
-    <textarea  class="product__form__input product__form__input__description" required placeholder="Enter notes" name="notes"></textarea>
+    <textarea  class="product__form__input product__form__input__description"  placeholder="Enter notes" name="notes"></textarea>
   </div>
 
             <div class="product__form__group">

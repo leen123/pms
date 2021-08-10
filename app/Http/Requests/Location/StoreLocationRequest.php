@@ -23,9 +23,9 @@ class StoreLocationRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-          'name' => 'required|string',
-          'state_id' => 'required|exists:states,id'
-        ];
+       // return [
+        //  'name' => 'required|string',
+        //  'state_id' => 'required|exists:states,id'
+      //  ];
     }
 }

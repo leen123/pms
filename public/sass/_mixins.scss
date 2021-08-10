@@ -17,6 +17,9 @@
 	font-size: 2.5rem;
 	font-weight: 600;
 	margin-left: 5rem;
+	&--suppliers{
+		margin-left: 0;
+	}
 	margin-top: .5rem;
 	text-decoration: underline;
 	color: var(--color-grey-dark-1);

@@ -45,6 +45,6 @@ class FactoriesController extends Controller
 
      $factory= Factory::find($id);
      $factory->delete();
-       return redirect('/factories/all');
+       return redirect('/edit-inputs-settings');
     }
 }

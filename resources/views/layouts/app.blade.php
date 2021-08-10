@@ -239,8 +239,8 @@
          Product
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="{{route('add-product')}}">add product</a>
-          <a class="dropdown-item" href="{{route('all-products')}}">all products</a>
+         <!-- <a class="dropdown-item" href="">add product</a>
+          <a class="dropdown-item" href="">all products</a> -->
 
         </div>
         </li>

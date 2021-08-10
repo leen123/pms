@@ -46,7 +46,7 @@ class CalibersController extends Controller
 
      $caliber= Caliber::find($id);
      $caliber->delete();
-       return redirect('/calibers/all');
+       return redirect('/edit-inputs-settings');
     }
 
 }

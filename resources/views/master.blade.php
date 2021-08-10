@@ -137,6 +137,14 @@
                     <span>Users</span>
                   </a>
                 </li>
+                <li class="nav__list__item nav__list__item--active">
+                    <a href="{{route('departments')}}" class="nav__list__item__link nav__list__item__link--active">
+                      <svg class="nav__list__item__icon  nav__list__item__icon--active">
+                        <use xlink:href="images/sprite.svg#icon-tree"></use>
+                      </svg>
+                      <span>Departments</span>
+                    </a>
+                  </li>
                 <li class="nav__list__item">
                   <a href="{{route('my-account')}}" class="nav__list__item__link">
                     <svg class="nav__list__item__icon">
@@ -171,6 +179,14 @@
                             <use xlink:href="images/sprite.svg#icon-pencil"></use>
                           </svg>
                           <span>Edit Inputs</span>
+                        </a>
+                      </li>
+                      <li class="nav__list__item">
+                        <a href="{{route('site')}}" class="nav__list__item__link">
+                          <svg class="nav__list__item__icon">
+                            <use xlink:href="images/sprite.svg#icon-pencil"></use>
+                          </svg>
+                          <span>Edit sites</span>
                         </a>
                       </li>
                     </ul>
