@@ -1,4 +1,4 @@
-/*
+/* 
 COLORS
 Primary: #2CB200
 Primary light: #35D600
@@ -10,8 +10,8 @@ Grey light 3: #f0eeee
 Grey light 4: #ccc
 Grey dark 1: #333
 Grey dark 2: #777
-Grey dark 3: #999
-*/
+Grey dark 3: #999 */
+
 :root {
   --color-primary: #2CB200;
   --color-primary-light: #35D600;

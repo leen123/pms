@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Auth;
 // Route::group(['middleware' => ['role:admin']], function(){
 
 // });
+Route::get('/lang/{locale}', [App\Http\Controllers\LocaleController::class, 'changeLocale'])->name('locale');
 
 Route::get('/', 'PagesController@index')->name('index');
 
