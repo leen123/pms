@@ -39,7 +39,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-blackboard"></use>
                     </svg>
-                    <span>Dashboard</span>
+                    <span>{{__('pages.dashboard')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item">
@@ -47,7 +47,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-home"></use>
                     </svg>
-                    <span>Home</span>
+                    <span>{{__('pages.home')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item" id="sub-nav-title">
@@ -56,7 +56,7 @@
                       <svg class="nav__list__item__icon" id="on-nav">
                         <use xlink:href="images/sprite.svg#icon-aid-kit" id="on-nav"></use>
                       </svg>
-                      <span id="on-nav">Medicines</span>
+                      <span id="on-nav">{{__('pages.medicines')}}</span>
                       <svg class="nav__list__item__icon nav__list__item__icon--dropdown--first" id="on-nav">
                         <use xlink:href="images/sprite.svg#icon-chevron-small-right" id="on-nav"></use>
                       </svg>
@@ -67,7 +67,7 @@
                           <svg class="nav__list__item__icon">
                             <use xlink:href="images/sprite.svg#icon-magnifying-glass"></use>
                           </svg>
-                          <span>Search for Medicine</span>
+                          <span>{{__('pages.medicine_search')}}</span>
                         </a>
                       </li>
                       <li class="nav__list__item">
@@ -75,7 +75,7 @@
                           <svg class="nav__list__item__icon">
                             <use xlink:href="images/sprite.svg#icon-circle-with-plus"></use>
                           </svg>
-                          <span>Add Medicine</span>
+                          <span>{{{__('pages.add_medicine')}}}</span>
                         </a>
                       </li>
                       <li class="nav__list__item  nav__list__item--active">
@@ -83,7 +83,7 @@
                           <svg class="nav__list__item__icon  nav__list__item__icon--active">
                             <use xlink:href="images/sprite.svg#icon-pencil"></use>
                           </svg>
-                          <span>Edit Medicine</span>
+                          <span>{{__('pages.edit_medicine')}}</span>
                         </a>
                       </li>
                       <li class="nav__list__item">
@@ -91,7 +91,7 @@
                           <svg class="nav__list__item__icon">
                             <use xlink:href="images/sprite.svg#icon-trash"></use>
                           </svg>
-                          <span>Remove Medicine</span>
+                          <span>{{__('pages.remove_medicine')}}</span>
                         </a>
                       </li>
                     </ul>
@@ -102,7 +102,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-arrow-left"></use>
                     </svg>
-                    <span>Return</span>
+                    <span>{{__('pages.returns')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item">
@@ -110,7 +110,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-database"></use>
                     </svg>
-                    <span>Inventory</span>
+                    <span>{{__('pages.inventory')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item">
@@ -118,7 +118,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-news"></use>
                     </svg>
-                    <span>New Bill</span>
+                    <span>{{__('pages.new_bill')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item">
@@ -126,7 +126,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-profile"></use>
                     </svg>
-                    <span>Suppliers</span>
+                    <span>{{__('pages.suppliers')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item">
@@ -134,7 +134,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-users"></use>
                     </svg>
-                    <span>Users</span>
+                    <span>{{__('pages.users')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item nav__list__item--active">
@@ -142,7 +142,7 @@
                       <svg class="nav__list__item__icon  nav__list__item__icon--active">
                         <use xlink:href="images/sprite.svg#icon-tree"></use>
                       </svg>
-                      <span>Departments</span>
+                      <span>{{__('pages.departments')}}</span>
                     </a>
                   </li>
                 <li class="nav__list__item">
@@ -150,7 +150,7 @@
                     <svg class="nav__list__item__icon">
                       <use xlink:href="images/sprite.svg#icon-user"></use>
                     </svg>
-                    <span>My account</span>
+                    <span>{{__('pages.my_account')}}</span>
                   </a>
                 </li>
                 <li class="nav__list__item" id="sub-nav-title-2">
@@ -159,7 +159,7 @@
                       <svg class="nav__list__item__icon" id="on-nav">
                         <use xlink:href="images/sprite.svg#icon-cog" id="on-nav"></use>
                       </svg>
-                      <span id="on-nav">Settings</span>
+                      <span id="on-nav">{{__('pages.settings')}}</span>
                       <svg class="nav__list__item__icon nav__list__item__icon--dropdown--second" id="on-nav">
                         <use xlink:href="images/sprite.svg#icon-chevron-small-right" id="on-nav"></use>
                       </svg>
@@ -170,7 +170,7 @@
                           <svg class="nav__list__item__icon">
                             <use xlink:href="images/sprite.svg#icon-equalizer"></use>
                           </svg>
-                          <span>General Settings</span>
+                          <span>{{__('pages.general_settings')}}</span>
                         </a>
                       </li>
                       <li class="nav__list__item">
@@ -178,7 +178,7 @@
                           <svg class="nav__list__item__icon">
                             <use xlink:href="images/sprite.svg#icon-pencil"></use>
                           </svg>
-                          <span>Edit Inputs</span>
+                          <span>{{__('pages.edit_inputs')}}</span>
                         </a>
                       </li>
                       <li class="nav__list__item">
@@ -186,7 +186,7 @@
                           <svg class="nav__list__item__icon">
                             <use xlink:href="images/sprite.svg#icon-pencil"></use>
                           </svg>
-                          <span>Edit sites</span>
+                          <span>{{__('pages.edit_sites')}}</span>
                         </a>
                       </li>
                     </ul>
@@ -223,7 +223,7 @@
           <img src="images/logo-white.png" alt="Logo White" class="header__logo--white">
 
           <div class="header__text-box">
-            <span id = "text" class="header__text-box__text">Pharmaty Management System</span>
+            <span id = "text" class="header__text-box__text">{{__('pages.title')}}</span>
           </div>
 
           <div class="header__user">
