@@ -39,7 +39,7 @@
         </div>
 
         <div class="launcher__text-box">
-          <h1>Always laugh when you can.<br>It is cheap medicine.</h1>
+          <h1>{!! __('pages.qoute') !!}</h1>
           <a href="{{route('main')}}" class="btn btn__launcher btn__launcher--solid">Launch</a>
           <a href="{{route('index')}}" class="btn btn__launcher btn__launcher--empty">Log out</a>
         </div>
