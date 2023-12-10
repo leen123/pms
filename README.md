@@ -1,4 +1,4 @@
-![image](https://github.com/leen123/pms/assets/58842963/65586a1c-b032-43c8-ab63-983f4e89f3e7)Pharmacy Management System
+Pharmacy Management System
 <div align="center">
 License: MIT
 
@@ -104,6 +104,7 @@ Othyer Pages
 
 ![image](https://github.com/leen123/pms/assets/58842963/a16c5b97-06bd-4bc8-965f-14582f2d142d)
 
+![image](https://github.com/leen123/pms/assets/58842963/65586a1c-b032-43c8-ab63-983f4e89f3e7)
 
 
 
