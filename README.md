@@ -1,12 +1,12 @@
-Pharmacy Management System
+## Pharmacy Management System
 <div align="center">
 License: MIT
 
 </div>
-Overview:
+## Overview:
 The Pharmacy Management System for Damascus University is an advanced application utilizing the Laravel framework to facilitate and enhance pharmacy management and operations. This project aims to improve the efficiency of services and enhance the patient experience in obtaining medications and healthcare.
 
-Key Features:
+## Key Features:
 Inventory Management:
 An advanced system to track inventory, including medications and medical supplies.
 Automatic updates for inventory levels with alerts in case of shortages.
